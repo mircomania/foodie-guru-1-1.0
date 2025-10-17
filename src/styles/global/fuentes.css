@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Formula-Light';
+    src: url('/fonts/FormulaCondensed-Light.woff2') format('woff2'), url('/fonts/FormulaCondensed-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Formula-Bold';
+    src: url('/fonts/FormulaCondensed-Bold.woff2') format('woff2'), url('/fonts/FormulaCondensed-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alliance No.2';
+    src: url('/fonts/AllianceNo2-Light.woff2') format('woff2'), url('/fonts/AllianceNo2-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('/fonts/Poppins-SemiBold.woff2') format('woff2'), url('/fonts/Poppins-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+.poppins-text {
+    font-family: 'Formula-Light', sans-serif;
+}
+
+.alliance-text {
+    font-family: 'Alliance No.2', sans-serif;
+}
+
+.formula-light {
+    font-family: 'Formula-Light', sans-serif;
+}
+
+.formula-bold {
+    font-family: 'Formula-Bold', sans-serif;
+}

@@ -1,0 +1,260 @@
+.navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--dark-color);
+    box-shadow: 0 4px 10px var(--dark-color);
+    width: 100%;
+    z-index: 99;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-navbar {
+    user-select: none;
+    pointer-events: none;
+    height: 60px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+/* --------------------------------- MENU HAMBURGESA*/
+
+.burger-menu-icon {
+    display: 'inline-block';
+    top: 12px;
+    right: 20px;
+    color: var(--white-color);
+    cursor: pointer;
+    z-index: 100;
+    transition: top 0.25s ease, right 0.25s ease, transform 0.25s ease;
+}
+
+.burger-menu-icon.absolute {
+    position: absolute;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.burger-menu-icon.fixed {
+    position: fixed;
+    opacity: 0.95;
+    transform: translateY(2px);
+}
+
+.mobile-nav-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--dark-color);
+    padding-top: 80px;
+    box-shadow: -4px 0 10px var(--dark-color);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 99;
+}
+
+.mobile-nav-menu.open {
+    transform: translateX(0);
+}
+
+.mobile-nav-menu ul {
+    list-style: none;
+}
+
+.mobile-nav-menu li {
+    cursor: pointer;
+    user-select: none;
+    text-align: end;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    margin-right: 24px;
+    font-size: 20px;
+}
+
+.container-bajo-mobile {
+    position: absolute;
+    bottom: 20px;
+    right: 10%;
+}
+
+.logo-mobile-menu {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.logo-mobile-menu img {
+    user-select: none;
+    pointer-events: none;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+/* --------- ESTILOS PARA LINKS*/
+
+.menu-nav li a,
+.burger-menu-nav li a {
+    text-decoration: none;
+    color: var(--white-color);
+}
+
+.menu-nav li a.active,
+.burger-menu-nav li a.active {
+    color: var(--yellow-color);
+    border-bottom: 4px solid var(--yellow-color);
+    padding-bottom: 2px;
+}
+
+.burger-menu-nav li:last-child,
+.menu-nav li:last-child {
+    color: var(--black-color);
+    margin-right: 14px;
+}
+
+.burger-menu-nav li:last-child a,
+.menu-nav li:last-child a {
+    color: var(--black-color);
+}
+
+.burger-menu-nav li:last-child a.active,
+.menu-nav li:last-child a.active {
+    color: var(--black-color);
+    border-bottom: none;
+    padding-bottom: 0px;
+}
+
+.contacto-navbar {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 1000;
+    font-family: inherit;
+    letter-spacing: inherit;
+    font-size: inherit;
+    background-color: var(--yellow-color);
+    color: var(--black-color);
+    border-radius: 20px;
+    padding-top: 5px;
+    width: 105px;
+    height: 40px;
+}
+
+@media (min-width: 576px) {
+    .logo-navbar {
+        margin-left: 30px;
+    }
+
+    /* --------------------------------- MENU HAMBURGESA*/
+
+    .burger-menu-icon {
+        right: 30px;
+    }
+
+    .mobile-nav-menu {
+        width: 40%;
+    }
+
+    .mobile-nav-menu li {
+        margin-right: 34px;
+    }
+
+    .container-bajo-mobile {
+        display: none;
+    }
+
+    .burger-menu-nav li:last-child,
+    .menu-nav li:last-child {
+        margin-right: 24px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        padding: 0 50px;
+    }
+
+    .logo-navbar {
+        margin-left: 0px;
+        margin-top: 8px;
+        margin-bottom: 2px;
+    }
+
+    .menu-nav {
+        user-select: none;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        font-size: 18px;
+    }
+
+    /* --------- ESTILOS PARA LINKS*/
+
+    .menu-nav li a:hover {
+        filter: drop-shadow(0px 0px 0.1px var(--yellow-color));
+    }
+
+    .menu-nav li a.active:hover {
+        filter: none;
+    }
+
+    .menu-nav li:last-child a:hover {
+        filter: none;
+    }
+
+    .burger-menu-nav li:last-child,
+    .menu-nav li:last-child {
+        margin-right: 0px;
+    }
+
+    .contacto-navbar {
+        padding-top: 7px;
+    }
+
+    .contacto-navbar:hover {
+        background-color: var(--white-color);
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar {
+        padding: 0 100px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .navbar {
+        padding: 0 200px;
+    }
+
+    .logo-navbar {
+        height: 80px;
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+
+    .menu-nav {
+        gap: 50px;
+        font-size: 20px;
+    }
+
+    .contacto-navbar {
+        border-radius: 25px;
+        padding-top: 11px;
+        width: 110px;
+        height: 50px;
+    }
+}
