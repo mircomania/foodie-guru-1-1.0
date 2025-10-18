@@ -1,1 +1,0 @@
-import{j as n}from"./index-Cg27qkH2.js";const t="_sectionContainer_1jmu1_1",e={sectionContainer:t},s=()=>n.jsx("section",{className:e.sectionContainer,children:n.jsx("h1",{children:"hola"})}),i=()=>n.jsx("main",{children:n.jsx(s,{})});export{i as default};
