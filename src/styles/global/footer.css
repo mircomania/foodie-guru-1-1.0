@@ -1,0 +1,158 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--dark-color);
+    width: 100%;
+    padding: 20px 25px;
+    gap: 30px;
+}
+
+.contenido-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.logo-contacto img {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.logo-contacto p {
+    color: var(--white-color);
+    font-size: 16px;
+}
+
+.logo-contacto p:last-child {
+    color: var(--yellow-color);
+}
+
+.nav-footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+    list-style: none;
+    gap: 10px 0px;
+    width: 113px;
+}
+
+.nav-footer ul li a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 16px;
+}
+
+.utils-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.utils-footer p,
+.utils-footer a {
+    text-decoration: none;
+    color: var(--gray-color-3);
+    font-size: 14px;
+}
+
+.utils-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+@media (min-width: 576px) {
+    .footer {
+        padding: 28px 30px;
+        gap: 40px;
+    }
+
+    .nav-footer ul {
+        gap: 20px 0px;
+        width: 226px;
+    }
+
+    .nav-footer ul li {
+        width: 113px;
+    }
+
+    .utils-footer {
+        flex-direction: row;
+        justify-content: start;
+        gap: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 28px 50px;
+    }
+
+    .contenido-footer {
+        justify-content: start;
+        gap: 275px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .footer {
+        padding: 28px 100px;
+    }
+
+    .contenido-footer {
+        gap: 390px;
+    }
+
+    .nav-footer ul {
+        gap: 30px 100px;
+        width: 326px;
+    }
+
+    .nav-footer ul li a:hover {
+        color: var(--gray-color-3);
+    }
+
+    .utils-footer a:hover {
+        color: var(--white-color);
+    }
+}
+
+@media (min-width: 1400px) {
+    .footer {
+        padding: 23px 200px;
+        gap: 30px;
+    }
+
+    .contenido-footer {
+        gap: 420px;
+    }
+
+    .logo-contacto img {
+        height: 80px;
+    }
+
+    .nav-footer ul {
+        gap: 30px 200px;
+        width: 426px;
+    }
+}
+
+@media (min-width: 1700px) {
+    .contenido-footer {
+        gap: 710px;
+    }
+}

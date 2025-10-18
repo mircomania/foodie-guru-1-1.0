@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { Navbar } from './components/common/Navbar';
 import { Cargando } from './components/utils/Cargando';
+import { Footer } from './components/common/Footer';
 
 import { ScrollToTop } from './hooks/ScrollTop';
 
@@ -42,6 +43,8 @@ function App() {
                     </Routes>
                 </Suspense>
             )}
+
+            <Footer />
         </BrowserRouter>
     );
 }

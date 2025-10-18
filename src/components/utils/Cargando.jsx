@@ -1,11 +1,11 @@
-import camaraCargando from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo.png';
 
 export const Cargando = () => {
     return (
         <div className="cargando-container">
-            <img src={camaraCargando} alt="Camara fotografica" className="camara" />
+            <img src={logo} alt="Logotipo de Foodie Guru" />
 
-            <p className="pacifico-text typing">Cargando...</p>
+            <p className="poppins-text typing">Cargando...</p>
         </div>
     );
 };

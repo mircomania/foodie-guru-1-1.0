@@ -1,9 +1,9 @@
+import { SectionLp1 } from '../exports/SectionLp1';
+
 const LandingPage = () => {
     return (
         <main>
-            <section>
-                <h1>hola</h1>
-            </section>
+            <SectionLp1 />
         </main>
     );
 };
