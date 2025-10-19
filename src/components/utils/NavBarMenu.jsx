@@ -26,6 +26,6 @@ export const navLinks = [
         ),
         label2: 'Contacto',
         title: 'Contactate con Foodie Guru',
-        dataLink: 'navbar-contacto-link',
+        dataCta: 'navbar-contacto-link',
     },
 ];

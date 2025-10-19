@@ -2,7 +2,7 @@ import Logo from '../../assets/images/logo.png';
 
 import { NavLink } from 'react-router-dom';
 
-import { navLinks } from '../utils/navBarMenu';
+import { navLinks } from '../utils/NavBarMenu';
 
 export const Footer = () => {
     return (
@@ -26,7 +26,8 @@ export const Footer = () => {
                                     to={item.to}
                                     title={item.title}
                                     className={({ isActive }) => (isActive ? 'active' : '')}
-                                    data-link={item.dataLink}
+                                    {...(item.dataLink && { 'data-link': item.dataLink })}
+                                    {...(item.dataCta && { 'data-cta': item.dataCta })}
                                 >
                                     {item.label2}
                                 </NavLink>

@@ -44,7 +44,12 @@ export const BurgerMenu = () => {
         <div className="burger-menu" ref={menuRef}>
             {/* ICONO */}
 
-            <BurgerIcon onClick={toggleMenu} className={`burger-menu-icon ${isScrolled && isOpen ? 'fixed' : 'absolute'}`} aria-label="Abrir menú" />
+            <BurgerIcon
+                onClick={toggleMenu}
+                className={`burger-menu-icon ${isScrolled && isOpen ? 'fixed' : 'absolute'}`}
+                aria-label="Abrir menú"
+                data-link="burgermenu-btn"
+            />
 
             {/* CONTENEDOR LISTA */}
 
@@ -52,10 +57,16 @@ export const BurgerMenu = () => {
                 {/* LISTA  */}
 
                 <ul className="burger-menu-nav alliance-text">
-                    {navLinks.map((link) => (
-                        <li key={link.id}>
-                            <NavLink to={link.to} onClick={toggleMenu} title={link.title} data-link={link.dataLink}>
-                                {link.label}
+                    {navLinks.map((item) => (
+                        <li key={item.id}>
+                            <NavLink
+                                to={item.to}
+                                onClick={toggleMenu}
+                                title={item.title}
+                                {...(item.dataLink && { 'data-link': item.dataLink })}
+                                {...(item.dataCta && { 'data-cta': item.dataCta })}
+                            >
+                                {item.label}
                             </NavLink>
                         </li>
                     ))}

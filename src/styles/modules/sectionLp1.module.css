@@ -6,6 +6,12 @@
     min-height: calc(100vh - 294px);
 }
 
+@media (min-width: 768px) {
+    .sectionContainer {
+        min-height: calc(100vh - 299px);
+    }
+}
+
 @media (min-width: 1400px) {
     .sectionContainer {
         min-height: calc(100vh - 323px);

@@ -51,6 +51,12 @@
     overflow: hidden;
 }
 
+@media (min-width: 768px) {
+    .cargando {
+        min-height: calc(100vh - 299px);
+    }
+}
+
 @media (min-width: 1400px) {
     .cargando {
         min-height: calc(100vh - 323px);
