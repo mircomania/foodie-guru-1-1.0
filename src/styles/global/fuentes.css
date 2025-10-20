@@ -32,16 +32,20 @@
 
 .poppins-text {
     font-family: 'Formula-Light', sans-serif;
+    text-shadow: 2px 2px 4px var(--shadow-color);
 }
 
 .alliance-text {
     font-family: 'Alliance No.2', sans-serif;
+    text-shadow: 2px 2px 4px var(--shadow-color);
 }
 
 .formula-light {
     font-family: 'Formula-Light', sans-serif;
+    text-shadow: 2px 2px 4px var(--shadow-color);
 }
 
 .formula-bold {
     font-family: 'Formula-Bold', sans-serif;
+    text-shadow: 2px 2px 4px var(--shadow-color);
 }

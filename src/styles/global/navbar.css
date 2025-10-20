@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     background-color: var(--dark-color);
-    box-shadow: 0 4px 10px var(--dark-color);
+    box-shadow: 0 4px 10px var(--shadow-color);
     width: 100%;
     z-index: 99;
 }
@@ -52,11 +52,11 @@
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 190px;
     height: 100%;
     background-color: var(--dark-color);
     padding-top: 80px;
-    box-shadow: -4px 0 10px var(--dark-color);
+    box-shadow: -4px 0 10px var(--shadow-color);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     transform: translateX(100%);
@@ -163,7 +163,7 @@
     }
 
     .mobile-nav-menu {
-        width: 40%;
+        width: 220px;
     }
 
     .mobile-nav-menu li {

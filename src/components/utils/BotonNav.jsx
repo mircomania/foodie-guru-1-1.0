@@ -2,9 +2,9 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 export const BotonNav = ({
-    to = '#contacto',
-    ariaLabel = 'Ir a la sección de contacto de MethodLab',
-    className = 'boton-1 light-text',
+    to = '/contacto',
+    ariaLabel = 'Ir a la sección de contacto de Foodie Guru',
+    className = 'boton-1 poppins-text',
     title = 'Haz clic para ir a la sección de contacto',
     children = 'IR',
     dataCta,
