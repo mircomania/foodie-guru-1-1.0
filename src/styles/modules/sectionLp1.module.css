@@ -14,7 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    min-height: calc(100vh - 69px);
+    min-height: calc(100svh - 69px);
     padding-top: 40px;
 }
 
@@ -22,6 +22,7 @@
     line-height: 1.05;
     letter-spacing: 2px;
     font-size: 66px;
+    margin-bottom: -10px;
 }
 
 .titulo1 {
@@ -70,7 +71,7 @@
     .contenido1 {
         flex-direction: row;
         align-items: end;
-        min-height: calc(100vh - 74px);
+        min-height: calc(100svh - 74px);
         padding-top: 60px;
     }
 
@@ -153,7 +154,7 @@
 
 @media (min-width: 1400px) {
     .contenido1 {
-        min-height: calc(100vh - 94px);
+        min-height: calc(100svh - 94px);
         padding-top: 100px;
         gap: 150px;
     }
