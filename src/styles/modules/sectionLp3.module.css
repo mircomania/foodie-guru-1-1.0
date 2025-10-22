@@ -1,0 +1,13 @@
+.sectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-color);
+    min-height: 600px;
+}
+
+.sectionContainer h2 {
+    letter-spacing: 1px;
+    color: var(--dark-color);
+}

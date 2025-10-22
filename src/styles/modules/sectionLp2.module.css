@@ -51,13 +51,13 @@
 
 @media (min-width: 768px) {
     .sectionContainer {
-        gap: 100px;
+        gap: 70px;
     }
 }
 
 @media (min-width: 992px) {
     .sectionContainer {
-        gap: 150px;
+        gap: 70px;
     }
 
     .contenidoInfo {
@@ -81,13 +81,13 @@
 
 @media (min-width: 1200px) {
     .sectionContainer {
-        gap: 230px;
+        gap: 130px;
     }
 }
 
 @media (min-width: 1400px) {
     .sectionContainer {
-        gap: 250px;
+        gap: 120px;
         padding-top: 60px;
     }
 
@@ -106,6 +106,6 @@
     }
 
     .sectionContainer img {
-        width: 200px;
+        width: 170px;
     }
 }
