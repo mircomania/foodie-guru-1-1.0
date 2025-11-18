@@ -1,177 +1,180 @@
 .sectionContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--dark-color);
-}
-
-.sectionContenido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    background-color: var(--gray-color);
-    box-shadow: 0 -4px 10px var(--shadow-color);
-    width: 100%;
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    padding: 0 20px;
+    background-color: var(--white-color);
     padding-top: 40px;
-    min-height: 600px;
+    padding-bottom: 60px;
+    gap: 20px;
 }
 
-.sectionTitulo {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
-}
-
-.sectionTitulo h2 {
+.sectionContainer h2 {
     color: var(--dark-color);
     letter-spacing: 1px;
     line-height: 1.05;
-    font-size: 32px;
+    font-size: 36px;
 }
 
-.sectionTitulo p {
+.sectionContenido {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    stroke: var(--dark-color);
+    stroke-width: 2;
+    z-index: 1;
+}
+
+.items {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 0px 10px var(--shadow-color));
+    width: 160px;
+    height: 160px;
+    border-radius: 100px;
+    padding: 10px;
+}
+
+.item1,
+.item3,
+.item5 {
+    background-color: var(--yellow-color);
     color: var(--dark-color);
-    width: 335px;
+}
+
+.item2,
+.item4 {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+}
+
+.item h3 {
     font-size: 16px;
 }
 
-.cargandoContainer,
-.errorContainer {
-    margin-bottom: 200px;
-}
-
-.comentarios {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.comentario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    background-color: var(--white-color);
-    gap: 20px;
-    padding: 0 20px;
-    padding-top: 20px;
-    width: 300px;
-    height: 250px;
-}
-
-.comentarioExtras {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.comentarioPersona {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-}
-
-.comentarioExtras img {
-    width: 50px;
-}
-
-@media (min-width: 576px) {
-    .sectionContenido {
-        padding: 0 40px;
-        padding-top: 40px;
-    }
-}
-
-@media (min-width: 768px) {
-    .sectionContenido {
-        align-items: center;
-        padding: 0px;
-        padding-top: 40px;
-    }
-
-    .sectionTitulo {
-        flex-direction: row;
-        align-items: start;
-        width: 660px;
-    }
-
-    .sectionTitulo h2 {
-        font-size: 32px;
-    }
-
-    .sectionTitulo p {
-        width: 300px;
-        font-size: 16px;
-        margin-top: -5px;
-    }
-}
-
 @media (min-width: 992px) {
-    .sectionContenido {
+    .sectionContainer {
         padding-top: 40px;
+        padding-bottom: 60px;
+        gap: 40px;
     }
 
-    .sectionTitulo {
-        width: 700px;
+    .sectionContainer h2 {
+        font-size: 56px;
     }
 
-    .sectionTitulo h2 {
-        font-size: 32px;
+    .line {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        stroke-width: 2;
     }
 
-    .sectionTitulo p {
-        width: 300px;
+    .items {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .item {
+        width: 160px;
+        height: 160px;
+        padding: 10px;
+    }
+
+    .item h3 {
         font-size: 16px;
-        margin-top: -5px;
     }
 }
 
 @media (min-width: 1200px) {
-    .sectionContenido {
+    .sectionContainer {
         padding-top: 60px;
+        padding-bottom: 80px;
+        gap: 60px;
     }
 
-    .sectionTitulo {
-        width: 800px;
+    .sectionContainer h2 {
+        font-size: 62px;
     }
 
-    .sectionTitulo h2 {
-        font-size: 42px;
+    .line {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        stroke-width: 2;
     }
 
-    .sectionTitulo p {
-        width: 360px;
-        font-size: 18px;
-        margin-top: -5px;
+    .items {
+        gap: 30px;
+    }
+
+    .item {
+        width: 160px;
+        height: 160px;
+        padding: 10px;
+    }
+
+    .item h3 {
+        font-size: 16px;
     }
 }
 
 @media (min-width: 1400px) {
-    .sectionContenido {
+    .sectionContainer {
         padding-top: 60px;
+        padding-bottom: 80px;
+        gap: 60px;
     }
 
-    .sectionTitulo {
-        width: 950px;
+    .sectionContainer h2 {
+        font-size: 70px;
     }
 
-    .sectionTitulo h2 {
-        font-size: 52px;
+    .line {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        stroke-width: 2;
     }
 
-    .sectionTitulo p {
-        width: 420px;
-        font-size: 20px;
-        margin-top: -5px;
+    .items {
+        gap: 50px;
+    }
+
+    .item {
+        width: 180px;
+        height: 180px;
+        padding: 10px;
+    }
+
+    .item h3 {
+        font-size: 18px;
     }
 }
