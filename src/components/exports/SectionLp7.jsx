@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 
 export const SectionLp7 = () => {
     return (
-        <NavLink to="/nosotros" className={styles.linkContainer}>
+        <NavLink to="/nosotros" className={styles.linkContainer} data-link="home-team-section" aria-label="Conoce al team Foodie Gurú">
             <section className={styles.sectionContainer}>
                 <div className={styles.sectionContenido}>
                     <h2 className="formula-bold">CONOCE AL TEAM FOODIE GURÚ</h2>

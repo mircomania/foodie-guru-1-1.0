@@ -1,8 +1,98 @@
+/* {
+"data": {
+    "boards": [
+    {
+        "id": "9197450873",
+        "name": "📲 Leads",
+        "columns": [
+        {
+            "id": "name",
+            "title": "Name",
+            "type": "name"
+        },
+        {
+            "id": "short_text3y3tles1",
+            "title": "👨‍🍳 Nombre de tu Negocio",
+            "type": "text"
+        },
+        {
+            "id": "phonebpido5ad",
+            "title": "📲 Teléfono",
+            "type": "phone"
+        },
+        {
+            "id": "long_textkentl9l3",
+            "title": "🤔 Algún comentario adicional (opcional)",
+            "type": "long_text"
+        },
+        {
+            "id": "color_mkr5rq3z",
+            "title": "💰 ¿Cuál es la venta promedio mensual de tu negocio?",
+            "type": "status"
+        },
+        {
+            "id": "color_mkr57t33",
+            "title": "🔽 Status",
+            "type": "status"
+        },
+        {
+            "id": "multiple_person_mkr5v2z1",
+            "title": "👤",
+            "type": "people"
+        },
+        {
+            "id": "color_mkr5her6",
+            "title": "📈 Etapa de tu Negocio",
+            "type": "status"
+        },
+        {
+            "id": "date_mkr525rg",
+            "title": "📅 Seguimiento",
+            "type": "date"
+        },
+        {
+            "id": "pulse_log_mkrccz68",
+            "title": "📅 Creación",
+            "type": "creation_log"
+        },
+        {
+            "id": "email_mkrfd41s",
+            "title": "📩 Email",
+            "type": "email"
+        },
+        {
+            "id": "board_relation_mkrfcsje",
+            "title": "👤 Contactos",
+            "type": "board_relation"
+        },
+        {
+            "id": "board_relation_mkrfpxj3",
+            "title": "🤑 Deals",
+            "type": "board_relation"
+        },
+        {
+            "id": "color_mktw838z",
+            "title": "Trigger seguimiento 2 días",
+            "type": "status"
+        },
+        {
+            "id": "text_mktzy809",
+            "title": "📍 Ciudad desde donde nos contacta",
+            "type": "text"
+        }
+        ]
+    }
+    ]
+},
+"extensions": {
+    "request_id": "7ede5389-b7d4-9562-8a9e-2810d11b360f"
+}
+} */
+
 const axios = require('axios');
-const { getToolStatusId, getEquipoStatusId } = require('../utils/mondayHelpers');
 
 const handleSubmit = async (req, res) => {
-    const { nombre, telefono, email, empresa, rol, equipo, tool } = req.body;
+    const { nombre, telefono, email, empresa, rol } = req.body;
 
     try {
         const columnValues = {
@@ -11,8 +101,6 @@ const handleSubmit = async (req, res) => {
             email_mkrpk182: { email, text: email },
             text_mkrpcqwa: empresa,
             text_mkrp60xg: rol,
-            single_selectlewjq16: getEquipoStatusId(equipo),
-            color_mkrpgbmm: getToolStatusId(tool),
         };
 
         console.log('Column values enviados a Monday:', columnValues);
