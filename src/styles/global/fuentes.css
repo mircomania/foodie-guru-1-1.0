@@ -1,27 +1,31 @@
+/* FORMULA LIGHT (300) */
 @font-face {
-    font-family: 'Formula-Light';
+    font-family: 'Formula';
     src: url('/fonts/FormulaCondensed-Light.woff2') format('woff2'), url('/fonts/FormulaCondensed-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
+/* FORMULA BOLD (700) */
 @font-face {
-    font-family: 'Formula-Bold';
+    font-family: 'Formula';
     src: url('/fonts/FormulaCondensed-Bold.woff2') format('woff2'), url('/fonts/FormulaCondensed-Bold.woff') format('woff');
-    font-weight: bold;
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
+/* ALLIANCE NO.2 */
 @font-face {
-    font-family: 'Alliance No.2';
+    font-family: 'Alliance';
     src: url('/fonts/AllianceNo2-Light.woff2') format('woff2'), url('/fonts/AllianceNo2-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
+/* POPPINS SEMIBOLD (600) */
 @font-face {
     font-family: 'Poppins';
     src: url('/fonts/Poppins-SemiBold.woff2') format('woff2'), url('/fonts/Poppins-SemiBold.woff') format('woff');
@@ -30,22 +34,44 @@
     font-display: swap;
 }
 
-.poppins-text {
-    font-family: 'Formula-Light', sans-serif;
-    text-shadow: 2px 2px 4px var(--shadow-color);
+/* PERMANENT MARKER */
+@font-face {
+    font-family: 'PermanentMarker';
+    src: url('/fonts/PermanentMarker-Regular.woff2') format('woff2'), url('/fonts/PermanentMarker-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
-.alliance-text {
-    font-family: 'Alliance No.2', sans-serif;
-    text-shadow: 2px 2px 4px var(--shadow-color);
-}
-
+/* FORMULA */
 .formula-light {
-    font-family: 'Formula-Light', sans-serif;
+    font-family: 'Formula', sans-serif;
+    font-weight: 300;
     text-shadow: 2px 2px 4px var(--shadow-color);
 }
 
 .formula-bold {
-    font-family: 'Formula-Bold', sans-serif;
+    font-family: 'Formula', sans-serif;
+    font-weight: 700;
     text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+/* ALLIANCE */
+.alliance-text {
+    font-family: 'Alliance', sans-serif;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+/* POPPINS */
+.poppins-text {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px var(--shadow-color);
+}
+
+/* PERMANENT MARKER */
+.marker-text {
+    font-family: 'PermanentMarker', cursive;
+    font-weight: 400;
 }
