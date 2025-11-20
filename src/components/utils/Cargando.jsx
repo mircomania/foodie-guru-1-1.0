@@ -5,7 +5,7 @@ export const Cargando = () => {
         <div className="cargando-container">
             <img src={logo} alt="Logotipo de Foodie Guru" />
 
-            <p className="poppins-text typing">Cargando...</p>
+            <p className="formula-light typing">Cargando...</p>
         </div>
     );
 };
