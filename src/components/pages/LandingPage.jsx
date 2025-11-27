@@ -1,10 +1,10 @@
-import { SectionLp1 } from '../exports/SectionLp1';
-import { SectionLp2 } from '../exports/SectionLp2';
-import { SectionLp3 } from '../exports/SectionLp3';
-import { SectionLp4 } from '../exports/SectionLp4';
-import { SectionLp5 } from '../exports/SectionLp5';
-import { SectionLp6 } from '../exports/SectionLp6';
-import { SectionLp7 } from '../exports/SectionLp7';
+import { SectionLp1 } from '../exports/home/SectionLp1';
+import { SectionLp2 } from '../exports/home/SectionLp2';
+import { SectionLp3 } from '../exports/home/SectionLp3';
+import { SectionLp4 } from '../exports/home/SectionLp4';
+import { SectionLp5 } from '../exports/home/SectionLp5';
+import { SectionLp6 } from '../exports/home/SectionLp6';
+import { SectionLp7 } from '../exports/home/SectionLp7';
 
 const LandingPage = () => {
     return (

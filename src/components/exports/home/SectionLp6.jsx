@@ -1,5 +1,5 @@
-import styles from '../../styles/modules/sectionLp6.module.css';
-import { CatSectionLp6 } from '../utils/CatSectionLp6';
+import styles from '../../../styles/modules/sectionLp6.module.css';
+import { CatSectionLp6 } from '../../utils/CatSectionLp6';
 
 export const SectionLp6 = () => {
     return (

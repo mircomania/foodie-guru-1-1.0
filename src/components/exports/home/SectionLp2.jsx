@@ -1,8 +1,8 @@
-import styles from '../../styles/modules/sectionLp2.module.css';
+import styles from '../../../styles/modules/sectionLp2.module.css';
 
-import img from '../../assets/images/img-lp-section-2-1.png';
+import img from '../../../assets/images/img-lp-section-2-1.png';
 
-import { BotonNav } from '../utils/BotonNav';
+import { BotonNav } from '../../utils/BotonNav';
 
 export const SectionLp2 = () => {
     return (

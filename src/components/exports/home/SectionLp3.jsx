@@ -1,4 +1,4 @@
-import styles from '../../styles/modules/sectionLp3.module.css';
+import styles from '../../../styles/modules/sectionLp3.module.css';
 
 export const SectionLp3 = () => {
     return (

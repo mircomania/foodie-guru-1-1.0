@@ -1,17 +1,29 @@
 import Logo from '../../assets/images/logo.png';
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 import { navLinks } from '../utils/NavBarMenu';
 
 export const Footer = () => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleLogoClick = (e) => {
+        e.preventDefault();
+        if (location.pathname === '/') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            navigate('/');
+        }
+    };
+
     return (
         <footer className="footer">
             <div className="contenido-footer">
                 <div className="logo-contacto alliance-text">
-                    <NavLink to="/" aria-label="Ir a la página de inicio" data-link="footer-logo-btn">
+                    <a to="/" aria-label="Ir a la página de inicio" data-link="footer-logo-btn" onClick={handleLogoClick}>
                         <img src={Logo} alt="Logotipo de Foodie Guru en el pie de página" />
-                    </NavLink>
+                    </a>
 
                     <p>Envíanos un mensaje</p>
 

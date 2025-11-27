@@ -8,6 +8,7 @@ import { Footer } from './components/common/Footer';
 import { ScrollToTop } from './hooks/ScrollTop';
 
 const LandingPage = lazy(() => import('./components/pages/LandingPage'));
+const NosotrosPage = lazy(() => import('./components/pages/NosotrosPage'));
 
 function App() {
     const [loading, setLoading] = useState(true);
@@ -40,6 +41,7 @@ function App() {
                 >
                     <Routes>
                         <Route path="/" element={<LandingPage />}></Route>
+                        <Route path="/nosotros" element={<NosotrosPage />}></Route>
                     </Routes>
                 </Suspense>
             )}
