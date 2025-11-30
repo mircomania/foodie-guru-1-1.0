@@ -1,4 +1,4 @@
-import styles from '../../../styles/modules/sectionNp1.module.css';
+import styles from '../../../styles/modules/nosotros/sectionNp1.module.css';
 
 export const SectionNp1 = () => {
     return (

@@ -1,4 +1,4 @@
-import styles from '../../../styles/modules/sectionLp5.module.css';
+import styles from '../../../styles/modules/home/sectionLp5.module.css';
 
 import img from '../../../assets/images/img-lp-section-5-1.png';
 

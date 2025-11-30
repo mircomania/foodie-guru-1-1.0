@@ -1,22 +1,17 @@
 .sectionContainer {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+    display: grid;
+    grid-template-rows: 60% 40%;
+    height: calc(100svh - 66px);
     background-color: var(--dark-color);
-    min-height: calc(100svh - 70px);
 }
 
 .sectionTitle {
     position: relative;
-    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    min-height: calc(70svh - 70px);
 }
 
 .sectionTitle h1 {
@@ -34,11 +29,8 @@
 
 .fondoTitle {
     position: absolute;
+    inset: 0;
     background-image: url('/src/assets/images/fondo-np-section-1-1.png');
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -53,64 +45,45 @@
     text-align: center;
     background-color: var(--white-color);
     width: 100%;
-    min-height: calc(40svh - 70px);
     padding: 20px;
 }
 
 .sectionContenido p {
     color: var(--dark-color);
-    width: 335px;
+    max-width: 335px;
     font-size: 16px;
 }
 
 @media (min-width: 576px) {
     .sectionContenido p {
-        width: 530px;
+        max-width: 530px;
     }
 }
 
 @media (min-width: 768px) {
     .sectionContainer {
-        min-height: calc(100svh - 65px);
+        height: calc(100svh - 74px);
     }
-
-    .sectionTitle {
-        min-height: calc(70svh - 65px);
-    }
-
     .sectionTitle h1 {
         font-size: 88px;
     }
 
-    .sectionContenido {
-        min-height: calc(40svh - 65px);
-    }
-
     .sectionContenido p {
-        width: 620px;
+        max-width: 620px;
         font-size: 18px;
     }
 }
 
 @media (min-width: 1400px) {
     .sectionContainer {
-        min-height: calc(100svh - 70px);
+        height: calc(100svh - 98px);
     }
-
-    .sectionTitle {
-        min-height: calc(70svh - 90px);
-    }
-
     .sectionTitle h1 {
         font-size: 118px;
     }
 
-    .sectionContenido {
-        min-height: calc(40svh - 90px);
-    }
-
     .sectionContenido p {
-        width: 750px;
+        max-width: 750px;
         font-size: 22px;
     }
 }
