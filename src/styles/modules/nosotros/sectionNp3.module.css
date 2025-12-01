@@ -1,0 +1,54 @@
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.sectionContainer {
+    background-color: var(--white-color);
+    overflow: hidden;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    animation: scroll 20s linear infinite;
+    gap: 50px;
+    padding-top: 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+@media (min-width: 768px) {
+    .track {
+        animation: scroll 30s linear infinite;
+    }
+}
+
+@media (min-width: 1200px) {
+    .track {
+        animation: scroll 50s linear infinite;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .track {
+        animation: scroll 80s linear infinite;
+    }
+}

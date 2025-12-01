@@ -11,6 +11,8 @@ export const SectionNp2 = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     useEffect(() => {
+        if (!isMobile) return;
+
         const container = containerRef.current;
         if (!container) return;
 
@@ -23,7 +25,7 @@ export const SectionNp2 = () => {
 
         container.addEventListener('scroll', handleScroll);
         return () => container.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [isMobile]);
 
     return (
         <section className={styles.sectionContainer}>

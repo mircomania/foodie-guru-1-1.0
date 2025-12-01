@@ -32,7 +32,7 @@ export const CardsNosoros = [
         nombre: 'RODRIGO ZAPATA',
         cargo: 'Director de Proyectos',
         foto: img3,
-        texto: 'Arquitecto del orden entre el caos gastronómico.Restaurantero metódico y disciplinado, con la mente en la rentabilidad y los pies en la cocina. Convencido de que un restaurante se dirige como una orquesta. Parte del ADN de Foodie Guru Consulting: convierte teorías en operaciones funcionales y rentables.',
+        texto: 'Arquitecto del orden entre el caos gastronómico. Restaurantero metódico y disciplinado, con la mente en la rentabilidad y los pies en la cocina. Convencido de que un restaurante se dirige como una orquesta. Parte del ADN de Foodie Guru Consulting: convierte teorías en operaciones funcionales y rentables.',
     },
     {
         id: '4',
