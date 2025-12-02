@@ -4,14 +4,14 @@ export const SectionNp4 = () => {
     return (
         <section className={styles.sectionContainer}>
             <h2 className="formula-bold">
-                &quot;Los que creen que la suerte existe,
+                &quot;LOS QUE CREEN QUE LA SUERTE EXISTE,
                 <br />
-                se quiebran. Los que buscan
+                SE QUIEBRAN. LOS QUE BUSCAN
                 <br />
-                estrategia, trascienden.&quot;
+                ESTRATEGIA, TRASCIENDEN.&quot;
             </h2>
 
-            <h3 className="formula-bold">- Foodie gurú</h3>
+            <h3 className="formula-bold">- FOODIE GURÚ</h3>
         </section>
     );
 };
