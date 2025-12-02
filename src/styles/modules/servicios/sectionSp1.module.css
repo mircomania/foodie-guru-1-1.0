@@ -37,6 +37,10 @@
 }
 
 @media (min-width: 1400px) {
+    .sectionContainer {
+        padding: 140px 0;
+    }
+
     .sectionContainer h1 {
         font-size: 82px;
     }
