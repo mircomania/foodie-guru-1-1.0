@@ -6,42 +6,13 @@ import logo from '../../assets/images/logo.png';
 
 import { getFaqStructuredData } from '../utils/getFaqStructuredData';
 import { faqData } from '../utils/faqData';
+import { ParseTextToJSX } from '../utils/ParseTextToJSX';
 
 import { BotonNav } from '../utils/BotonNav';
 
 import { HelmetProvider } from 'react-helmet-async';
 
 const faqStructuredData = getFaqStructuredData(faqData);
-
-const replaceWithJSX = (text, faqId) => {
-    const lines = text.split('\n').filter(Boolean);
-    const content = [];
-
-    let isList = false;
-    const listItems = [];
-
-    lines.forEach((line, idx) => {
-        const trimmed = line.trim();
-
-        if (trimmed.startsWith('- ')) {
-            isList = true;
-            listItems.push(<li key={`${faqId}-li-${idx}`}>{trimmed.replace('- ', '')}</li>);
-        } else {
-            if (isList) {
-                content.push(<ul key={`${faqId}-ul-${idx}`}>{listItems.slice()}</ul>);
-                listItems.length = 0;
-                isList = false;
-            }
-            content.push(<p key={`${faqId}-p-${idx}`}>{trimmed}</p>);
-        }
-    });
-
-    if (isList && listItems.length) {
-        content.push(<ul key={`${faqId}-ul-end`}>{listItems}</ul>);
-    }
-
-    return content;
-};
 
 const FaqPage = () => {
     return (
@@ -70,7 +41,7 @@ const FaqPage = () => {
                         <div key={id} className={styles.faqItem}>
                             <h3 className="formula-bold">{`${id}. ${question}`}</h3>
 
-                            <div className="alliance-text">{replaceWithJSX(answer, id)}</div>
+                            <div className="alliance-text">{ParseTextToJSX(answer, id)}</div>
 
                             <hr />
                         </div>
@@ -78,6 +49,7 @@ const FaqPage = () => {
                 </div>
 
                 <BotonNav dataCta="faq-btn">Solicitar Cita</BotonNav>
+
                 <hr />
             </section>
         </main>
