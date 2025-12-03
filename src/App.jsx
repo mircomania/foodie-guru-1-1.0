@@ -11,6 +11,8 @@ const LandingPage = lazy(() => import('./components/pages/LandingPage'));
 const NosotrosPage = lazy(() => import('./components/pages/NosotrosPage'));
 const ServiciosPage = lazy(() => import('./components/pages/ServiciosPage'));
 
+const FaqPage = lazy(() => import('./components/pages/FaqPage'));
+
 function App() {
     const [loading, setLoading] = useState(true);
 
@@ -44,6 +46,7 @@ function App() {
                         <Route path="/" element={<LandingPage />}></Route>
                         <Route path="/nosotros" element={<NosotrosPage />}></Route>
                         <Route path="/servicios" element={<ServiciosPage />}></Route>
+                        <Route path="/faq" element={<FaqPage />}></Route>
                     </Routes>
                 </Suspense>
             )}
