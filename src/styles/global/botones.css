@@ -1,4 +1,5 @@
-.boton-1 {
+.boton-1,
+.boton-2 {
     position: relative;
     display: inline-flex;
     justify-content: center;
@@ -15,6 +16,11 @@
     font-size: 18px;
 }
 
+.boton-2 {
+    min-height: 37px;
+    min-width: 92px;
+}
+
 .boton-1:hover {
     background: var(--white-color);
 }
@@ -24,15 +30,27 @@
 }
 
 @media (min-width: 992px) {
-    .boton-1 {
+    .boton-1,
+    .boton-2 {
         padding: 5px 30px;
         font-size: 20px;
+    }
+
+    .boton-2 {
+        min-height: 39px;
+        min-width: 117px;
     }
 }
 
 @media (min-width: 1400px) {
-    .boton-1 {
+    .boton-1,
+    .boton-2 {
         padding: 5px 40px;
         font-size: 24px;
+    }
+
+    .boton-2 {
+        min-height: 44px;
+        min-width: 149px;
     }
 }

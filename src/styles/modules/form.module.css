@@ -1,0 +1,96 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.inputContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.lectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.formControl {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: 'Alliance', sans-serif;
+    background-color: var(--gray-color-4);
+    color: var(--white-color);
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    width: 100%;
+    padding: 4px 10px;
+    padding-bottom: 8px;
+    font-size: 16px;
+}
+
+.formControl::placeholder {
+    color: var(--gray-color);
+    font-size: 13px;
+}
+
+.formControl:focus {
+    outline: none;
+}
+
+.errorInput {
+    filter: drop-shadow(0px 0px 3px red);
+}
+
+.contentEnvio {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.mensajeErrorGeneral {
+    max-height: 24px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    display: flex;
+    justify-content: center;
+}
+
+.mensajeErrorGeneral p {
+    color: var(--white-color);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.mensajeErrorGeneral.visible p {
+    opacity: 1;
+}
+
+@media (min-width: 992px) {
+    .formControl::placeholder {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .formControl {
+        padding: 10px 15px;
+        padding-bottom: 15px;
+        font-size: 18px;
+    }
+
+    .formControl::placeholder {
+        font-size: 18px;
+    }
+}

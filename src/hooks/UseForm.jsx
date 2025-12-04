@@ -91,13 +91,11 @@ export const useForm = (initialState, submitCallback) => {
 
         validateTelefono(newErrors);
 
-        validateEmpresa(newErrors);
+        validateInteresado(newErrors);
 
-        validateRol(newErrors);
+        validateVenta(newErrors);
 
-        validateEquipo(newErrors);
-
-        validateTool(newErrors);
+        validateCiudad(newErrors);
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
@@ -126,28 +124,21 @@ export const useForm = (initialState, submitCallback) => {
             newErrors.telefono = true;
         }
     };
-
-    const validateEmpresa = (newErrors) => {
-        if (!formData.empresa.trim()) {
-            newErrors.empresa = true;
+    const validateInteresado = (newErrors) => {
+        if (!formData.interesado.trim() || formData.interesado === 'Interesado en') {
+            newErrors.interesado = true;
         }
     };
 
-    const validateRol = (newErrors) => {
-        if (!formData.rol.trim()) {
-            newErrors.rol = true;
+    const validateVenta = (newErrors) => {
+        if (!formData.venta.trim() || formData.venta === '¿Cuál es la venta mensual de tu negocio?') {
+            newErrors.venta = true;
         }
     };
 
-    const validateEquipo = (newErrors) => {
-        if (!formData.equipo.trim() || formData.equipo === 'Selecciona una cantidad') {
-            newErrors.equipo = true;
-        }
-    };
-
-    const validateTool = (newErrors) => {
-        if (!formData.tool.trim() || formData.tool === 'Selecciona una opción') {
-            newErrors.tool = true;
+    const validateCiudad = (newErrors) => {
+        if (!formData.ciudad.trim()) {
+            newErrors.ciudad = true;
         }
     };
 
@@ -164,10 +155,9 @@ export const useForm = (initialState, submitCallback) => {
                 nombre: formData.nombre,
                 telefono: formData.telefono,
                 email: formData.email,
-                empresa: formData.empresa,
-                rol: formData.rol,
-                equipo: formData.equipo,
-                tool: formData.tool,
+                interesado: formData.interesado,
+                venta: formData.venta,
+                ciudad: formData.ciudad,
                 ...utmWithoutTimestamp,
             };
             //'http://localhost:5000/submit'

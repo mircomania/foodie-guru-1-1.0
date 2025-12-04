@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { BurgerIcon } from '../utils/BurgerIcon';
+import { BurgerIcon } from '../../assets/icons/BurgerIcon';
 
 import LogoBurger from '../../assets/images/logo.png';
 

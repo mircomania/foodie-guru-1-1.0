@@ -36,11 +36,11 @@ const TerminosPage = () => {
                         </div>
                     ))}
                 </div>
+
+                <BotonNav dataCta="terminos-btn">Solicitar Cita</BotonNav>
+
+                <hr />
             </section>
-
-            <BotonNav dataCta="terminos-btn" />
-
-            <hr />
         </main>
     );
 };
