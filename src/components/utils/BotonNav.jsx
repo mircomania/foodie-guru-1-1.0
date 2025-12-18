@@ -1,50 +1,66 @@
-import { useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-export const BotonNav = ({
-    to = '/contacto',
-    ariaLabel = 'Ir a la sección de contacto de Foodie Guru',
-    className = 'boton-1 poppins-text',
-    title = 'Haz clic para ir a la sección de contacto',
-    children = 'IR',
-    dataCta,
-    dataLink,
-}) => {
+export const BotonNav = ({ to = '/contacto', ariaLabel, className = 'boton-1 poppins-text', title, children, dataCta, dataLink }) => {
     const location = useLocation();
     const navigate = useNavigate();
 
+    const esExterno = to.startsWith('http://') || to.startsWith('https://');
+    const esAncla = to.startsWith('#');
+    const idDestino = to.replace('#', '');
+
     const handleClick = (e) => {
+        if (!esAncla) return;
+
         e.preventDefault();
 
-        const esAncla = to.startsWith('#');
-        const idDestino = to.replace('#', '');
-
-        if (location.pathname === '/' && esAncla) {
-            const targetElement = document.getElementById(idDestino);
-            if (targetElement) {
+        // ANCLA EN HOME
+        if (location.pathname === '/') {
+            const target = document.getElementById(idDestino);
+            if (target) {
                 window.scrollTo({
-                    top: targetElement.offsetTop,
+                    top: target.offsetTop,
                     behavior: 'smooth',
                 });
             }
-        } else if (esAncla) {
-            navigate(`/#${idDestino}`);
-        } else {
-            navigate(to);
+            return;
         }
+
+        // ANCLA DESDE OTRA RUTA
+        navigate(`/#${idDestino}`);
     };
 
+    // LINK EXTERNO
+    if (esExterno) {
+        return (
+            <a
+                href={to}
+                className={className}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={ariaLabel}
+                title={title}
+                {...(dataCta ? { 'data-cta': dataCta } : {})}
+                {...(dataLink ? { 'data-link': dataLink } : {})}
+            >
+                {children}
+            </a>
+        );
+    }
+
+    // NAVEGACIÓN SPA (rutas + anclas)
     return (
-        <button
+        <NavLink
+            to={esAncla ? '/' : to}
             onClick={handleClick}
             className={className}
-            title={title}
             aria-label={ariaLabel}
+            title={title}
             {...(dataCta ? { 'data-cta': dataCta } : {})}
             {...(dataLink ? { 'data-link': dataLink } : {})}
         >
             {children}
-        </button>
+        </NavLink>
     );
 };
 

@@ -158,6 +158,7 @@ export const useForm = (initialState, submitCallback) => {
                 interesado: formData.interesado,
                 venta: formData.venta,
                 ciudad: formData.ciudad,
+                comentario: formData.comentario,
                 ...utmWithoutTimestamp,
             };
             //'http://localhost:5000/submit'

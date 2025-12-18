@@ -1,8 +1,9 @@
 import Logo from '../../assets/images/logo.png';
 
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { navLinks } from '../utils/NavBarMenu';
+import { SmartLink } from '../utils/SmartLink';
 
 export const Footer = () => {
     const location = useLocation();
@@ -34,7 +35,7 @@ export const Footer = () => {
                     <ul className="alliance-text">
                         {navLinks.map((item) => (
                             <li key={item.id}>
-                                <NavLink
+                                <SmartLink
                                     to={item.to}
                                     title={item.title}
                                     className={({ isActive }) => (isActive ? 'active' : '')}
@@ -42,7 +43,7 @@ export const Footer = () => {
                                     {...(item.dataCta && { 'data-cta': item.dataCta })}
                                 >
                                     {item.label2}
-                                </NavLink>
+                                </SmartLink>
                             </li>
                         ))}
                     </ul>
@@ -53,17 +54,17 @@ export const Footer = () => {
                 <p>All right reserved.</p>
 
                 <div className="utils-nav">
-                    <NavLink to="/politica-privacidad" title="Ver la política de privacidad" data-link="footer-politica-link">
+                    <SmartLink to="/politica-privacidad" title="Ver la política de privacidad" data-link="footer-politica-link">
                         Privacy Policy
-                    </NavLink>
+                    </SmartLink>
 
-                    <NavLink to="/terminos-condiciones" title="Ver los términos y condiciones" data-link="footer-terminos-link">
+                    <SmartLink to="/terminos-condiciones" title="Ver los términos y condiciones" data-link="footer-terminos-link">
                         Terms of Service
-                    </NavLink>
+                    </SmartLink>
 
-                    <NavLink to="/faq" title="Ver las preguntas preguntas frecuentes" data-link="footer-faq-link">
+                    <SmartLink to="/faq" title="Ver las preguntas preguntas frecuentes" data-link="footer-faq-link">
                         FAQ
-                    </NavLink>
+                    </SmartLink>
                 </div>
             </div>
         </footer>

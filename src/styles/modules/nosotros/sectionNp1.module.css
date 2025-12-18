@@ -30,11 +30,11 @@
 .fondoTitle {
     position: absolute;
     inset: 0;
-    background-image: url('/src/assets/images/fondo-np-section-1-1.png');
+    background-image: url('/src/assets/images/fondo-np-section-1-2.png');
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 1;
 }
 
 .sectionContenido {

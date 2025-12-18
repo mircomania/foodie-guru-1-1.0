@@ -7,6 +7,7 @@
     text-align: center;
     cursor: pointer;
     border: none;
+    text-decoration: none;
     border-radius: 75px;
     box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease;
@@ -19,6 +20,7 @@
 .boton-2 {
     min-height: 37px;
     min-width: 92px;
+    padding-bottom: 10px;
 }
 
 .boton-1:hover {
@@ -39,6 +41,7 @@
     .boton-2 {
         min-height: 39px;
         min-width: 117px;
+        padding-bottom: 10px;
     }
 }
 
@@ -52,5 +55,6 @@
     .boton-2 {
         min-height: 44px;
         min-width: 149px;
+        padding-bottom: 10px;
     }
 }

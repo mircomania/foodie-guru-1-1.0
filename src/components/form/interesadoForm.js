@@ -1,1 +1,1 @@
-export const interesado = ['Coaching', 'Consultoría', 'Desarrollo de Branding / Identidad de marca', 'Otra'];
+export const interesado = ['Consultoría', 'Coaching', 'Desarrollo de Branding / Identidad de marca', 'Otra'];

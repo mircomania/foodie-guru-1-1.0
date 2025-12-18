@@ -140,7 +140,7 @@ export const Form = () => {
 
             {/* VENTA */}
             <CustomSelect
-                label="Usas alguna herramienta de gestión"
+                label="¿Cuál es la venta mensual de tu negocio?"
                 name="venta"
                 options={ventasOptions}
                 value={formData.venta}
@@ -187,12 +187,7 @@ export const Form = () => {
             {/* BOTON ENVIAR */}
             <div className={styles.contentEnvio}>
                 <button type="submit" className="boton-2 alliance-text" disabled={loading}>
-                    <span style={{ paddingBottom: '5px', visibility: loading ? 'hidden' : 'visible' }}>Enviar</span>
-                    {loading && (
-                        <div>
-                            <Spinner size={24} color="var(--dark-color)" strokeWidth={3} speed={1} />
-                        </div>
-                    )}
+                    {loading ? <Spinner size={22} color="var(--dark-color)" strokeWidth={3} speed={1} /> : 'Enviar'}
                 </button>
             </div>
 

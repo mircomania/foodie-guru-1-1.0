@@ -3,7 +3,6 @@ const express = require('express');
 const cors = require('cors');
 
 const submitRoutes = require('./routes/submit');
-const comentariosRoutes = require('./routes/comentarios');
 
 const app = express();
 
@@ -13,7 +12,6 @@ app.use(express.json());
 
 // Rutas
 app.use('/api', submitRoutes);
-app.use('/comentarios', comentariosRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
