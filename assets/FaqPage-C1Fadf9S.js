@@ -1,4 +1,4 @@
-import{j as e,H as r,l as c}from"./index-x_f9mlnX.js";import{T as t}from"./TitleSEO-DeuYsmHc.js";import{s,P as d}from"./ParseTextToJSX-DE41-pmF.js";import{B as l}from"./BotonNav-CfP-71A3.js";const p=a=>({"@context":"https://schema.org","@type":"FAQPage",mainEntity:a.map(o=>({"@type":"Question",name:o.question,acceptedAnswer:{"@type":"Answer",text:o.answer}}))}),n=[{id:1,question:"¿Qué precio tienen sus servicios?",answer:`Nuestros servicios están organizados en programas y proyectos con precio fijo según el alcance. Contamos con:
+import{j as e,H as r,l as c}from"./index-B_R-oznR.js";import{T as t}from"./TitleSEO-DdzckkQf.js";import{s,P as d}from"./ParseTextToJSX-BGF4qbNn.js";import{B as l}from"./BotonNav-Bw1y9znl.js";const p=a=>({"@context":"https://schema.org","@type":"FAQPage",mainEntity:a.map(o=>({"@type":"Question",name:o.question,acceptedAnswer:{"@type":"Answer",text:o.answer}}))}),n=[{id:1,question:"¿Qué precio tienen sus servicios?",answer:`Nuestros servicios están organizados en programas y proyectos con precio fijo según el alcance. Contamos con:
 
 - Acompañamientos estratégicos de 3 meses
 
