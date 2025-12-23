@@ -62,8 +62,10 @@
 
 @media (min-width: 768px) {
     .sectionContainer {
+        grid-template-rows: 75% 25%;
         height: calc(100svh - 74px);
     }
+
     .sectionTitle h1 {
         font-size: 88px;
     }
@@ -76,6 +78,7 @@
 
 @media (min-width: 1400px) {
     .sectionContainer {
+        grid-template-rows: 70% 30%;
         height: calc(100svh - 98px);
     }
     .sectionTitle h1 {

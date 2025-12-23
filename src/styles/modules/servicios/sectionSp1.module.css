@@ -28,7 +28,7 @@
 
 @media (min-width: 1200px) {
     .sectionContainer {
-        padding: 100px 0;
+        padding: 20px 0;
     }
 
     .sectionContainer h1 {
@@ -36,9 +36,9 @@
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1700px) {
     .sectionContainer {
-        padding: 140px 0;
+        padding: 50px 0;
     }
 
     .sectionContainer h1 {

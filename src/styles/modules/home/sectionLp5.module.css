@@ -357,3 +357,14 @@
         width: 1400px;
     }
 }
+
+@media (min-width: 1930px) {
+    .sectionContenido {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 305px;
+        margin-right: 89vw;
+    }
+}
