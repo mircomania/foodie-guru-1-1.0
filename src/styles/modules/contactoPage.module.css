@@ -73,3 +73,9 @@
         width: 600px;
     }
 }
+
+@media (min-width: 1930px) {
+    .sectionContainer {
+        height: calc(100svh - 325px);
+    }
+}

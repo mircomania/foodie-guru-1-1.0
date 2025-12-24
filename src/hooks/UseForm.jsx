@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 
 import { PhoneNumberUtil } from 'google-libphonenumber';
-import Swal from 'sweetalert2';
 
-export const useForm = (initialState, submitCallback) => {
+export const useForm = (initialState, { onSuccess = () => {}, onError = () => {} } = {}) => {
     const [formData, setFormData] = useState(initialState);
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
@@ -41,25 +40,6 @@ export const useForm = (initialState, submitCallback) => {
             }
         }
     }, []);
-
-    const showAlert = (title, message, icon, color) => {
-        Swal.fire({
-            title,
-            html: `<div class="light-text"><p>${message}</p></div>`,
-            icon,
-            confirmButtonColor: color,
-            scrollbarPadding: false,
-            customClass: {
-                title: 'bold-text',
-            },
-            willOpen: () => {
-                document.body.style.overflow = 'auto';
-            },
-            willClose: () => {
-                document.body.style.overflow = 'auto';
-            },
-        });
-    };
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -173,13 +153,13 @@ export const useForm = (initialState, submitCallback) => {
             if (response.ok) {
                 window.dataLayer = window.dataLayer || [];
                 window.dataLayer.push({ event: 'formulario_enviado' });
-                submitCallback(true, data);
+                onSuccess(data);
                 resetForm();
             } else {
-                submitCallback(false, data);
+                onError(data);
             }
         } catch (error) {
-            submitCallback(false, error);
+            onError(error);
         } finally {
             setLoading(false);
         }
@@ -189,11 +169,11 @@ export const useForm = (initialState, submitCallback) => {
         setFormData({
             ...initialState,
             telefono: '+52',
-            equipo: '',
-            tool: '',
+            interesado: '',
+            venta: '',
         });
         setErrors({});
     };
 
-    return { formData, errors, loading, handleChange, updateField, handleSubmit, showAlert };
+    return { formData, errors, loading, handleChange, updateField, handleSubmit };
 };

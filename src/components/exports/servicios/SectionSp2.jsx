@@ -47,7 +47,7 @@ export const SectionSp2 = () => {
                     <div key={card.id} className={styles.card}>
                         <picture>
                             <source media="(min-width: 1200px)" srcSet={card.fotoWeb} />
-                            <img src={card.fotoMob} alt={card.titulo} />
+                            <img src={card.fotoMob} alt={`${card.titulo} - servicio disponible`} />
                         </picture>
 
                         <div className={`${styles.cardText} ${styles[`cardText${card.id}`]}`}>

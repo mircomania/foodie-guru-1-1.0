@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 
 import styles from '../../styles/modules/form.module.css';
 
@@ -11,6 +11,8 @@ import { CustomSelect } from './CustomSelect';
 
 import { ventas } from './ventasForm';
 import { interesado } from './interesadoForm';
+
+import Swal from 'sweetalert2';
 
 export const Form = () => {
     const [hideErrorOnFocus, setHideErrorOnFocus] = useState({});
@@ -27,7 +29,57 @@ export const Form = () => {
     const ventasOptions = ventas.map((e) => ({ value: e, label: e }));
     const interesadosOptions = interesado.map((e) => ({ value: e, label: e }));
 
-    const { formData, errors, loading, handleChange, updateField, handleSubmit, showAlert } = useForm(
+    const baseSwalConfig = useMemo(
+        () => ({
+            scrollbarPadding: false,
+            customClass: {
+                popup: 'swal-custom-popup',
+                title: 'swal-custom-title',
+                htmlContainer: 'swal-custom-text',
+                confirmButton: 'swal-custom-confirm',
+                cancelButton: 'swal-custom-cancel',
+            },
+        }),
+        []
+    );
+
+    const showSuccessAlert = useCallback(() => {
+        Swal.fire({
+            ...baseSwalConfig,
+            title: '¡Datos enviados correctamente!',
+            text: '¿Quieres agendar una cita?',
+            icon: 'success',
+            showCancelButton: true,
+            confirmButtonText: 'Agendar',
+            cancelButtonText: 'No',
+            customClass: {
+                ...baseSwalConfig.customClass,
+                popup: 'swal-custom-popup swal-success-popup',
+            },
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.open('https://calendly.com/charly-foodieguru/microanalisis-foodie-guru-consulting', '_blank');
+            }
+        });
+    }, [baseSwalConfig]);
+
+    const showErrorAlert = useCallback(() => {
+        Swal.fire({
+            ...baseSwalConfig,
+            title: 'Ups',
+            text: 'Hubo un error al enviar los datos.',
+            icon: 'error',
+            confirmButtonText: 'Entendido',
+            customClass: {
+                ...baseSwalConfig.customClass,
+                popup: 'swal-custom-popup swal-error-popup',
+                title: 'swal-custom-title swal-error-title',
+                confirmButton: 'swal-custom-confirm swal-error-confirm',
+            },
+        });
+    }, [baseSwalConfig]);
+
+    const { formData, errors, loading, handleChange, updateField, handleSubmit } = useForm(
         {
             nombre: '',
             email: '',
@@ -37,12 +89,9 @@ export const Form = () => {
             ciudad: '',
             comentario: '',
         },
-        (success, data) => {
-            if (success) {
-                showAlert('Excelente', 'Datos enviados correctamente.<br>Pronto nos pondremos en contacto contigo.', 'success', '#7f8ac7');
-            } else {
-                showAlert('Ups', 'Hubo un error al enviar los datos.', 'error', '#ac3150');
-            }
+        {
+            onSuccess: showSuccessAlert,
+            onError: showErrorAlert,
         }
     );
 

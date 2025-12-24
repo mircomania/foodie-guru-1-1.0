@@ -5,6 +5,7 @@
 @import url('../src/styles/global/errorCarga.css');
 @import url('../src/styles/global/inputTel.css');
 @import url('../src/styles/global/botones.css');
+@import url('../src/styles/global/sweertalert.css');
 @import url('../src/styles/global/footer.css');
 
 * {

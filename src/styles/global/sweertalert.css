@@ -1,0 +1,88 @@
+/* ALERT GENERAL */
+.swal-custom-popup {
+    font-family: 'Alliance', sans-serif;
+    background-color: var(--gray-color-2);
+}
+
+/* FONDO ERROR */
+.swal-error-popup {
+    background-color: var(--gray-color-2);
+}
+
+/* SOMBRA DE FONDO */
+.swal2-container {
+    background: rgba(20, 20, 30, 0.65) !important;
+}
+
+/* SUCCESS SUPERIOR */
+.swal-success-popup {
+    border-top: 4px solid var(--green-color);
+}
+
+/* ICONO SUCCESS */
+.swal-custom-popup .swal2-success-ring {
+    border-color: var(--green-color) !important;
+}
+
+.swal-custom-popup .swal2-success-line-tip,
+.swal-custom-popup .swal2-success-line-long {
+    background-color: var(--green-color) !important;
+}
+
+/* ICONO ERROR */
+.swal-error-popup .swal2-error {
+    border-color: var(--red-color) !important;
+}
+
+.swal-error-popup .swal2-x-mark-line-left,
+.swal-error-popup .swal2-x-mark-line-right {
+    background-color: var(--red-color) !important;
+}
+
+/* TÍTULO */
+.swal-custom-title {
+    font-family: 'Formula', sans-serif;
+    color: var(--green-color);
+    font-size: 22px;
+    letter-spacing: 1.5px;
+}
+
+/* TEXTO */
+.swal-custom-text {
+    color: var(--dark-color);
+    font-size: 16px;
+}
+
+/* BOTÓN CONFIRMAR SUCCESS */
+.swal-custom-confirm {
+    font-family: 'Formula', sans-serif;
+    letter-spacing: 1.5px;
+    background-color: var(--green-color) !important;
+    color: var(--white-color);
+    border-radius: 8px;
+}
+
+/* BOTÓN CANCELAR SUCCESS */
+.swal-custom-cancel {
+    font-family: 'Formula', sans-serif;
+    letter-spacing: 1.5px;
+    background-color: var(--gray-color) !important;
+    color: var(--white-color);
+    border-radius: 8px;
+}
+
+/* ERROR ESPECÍFICO */
+.swal-error-popup {
+    border-top: 4px solid var(--red-color);
+}
+
+/* TÍTULO ERROR */
+.swal-error-title {
+    color: var(--red-color);
+}
+
+/* BOTON ERROR */
+.swal-error-confirm {
+    background-color: var(--red-color) !important;
+    color: var(--white-color);
+}
