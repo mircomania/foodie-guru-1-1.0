@@ -1,3 +1,5 @@
+import { TitleSEO } from '../utils/TitleSEO';
+
 import { SectionLp1 } from '../exports/home/SectionLp1';
 import { SectionLp2 } from '../exports/home/SectionLp2';
 import { SectionLp3 } from '../exports/home/SectionLp3';
@@ -9,6 +11,12 @@ import { SectionLp7 } from '../exports/home/SectionLp7';
 const LandingPage = () => {
     return (
         <main>
+            <TitleSEO
+                title="Foodie Guru | Expertos en Restaurantes"
+                description="Foodie Guru es una consultora especializada en restaurantes en Monterrey, Nuevo León. Transformamos negocios gastronómicos en marcas rentables."
+                canonical="https://foodieguru.mx/"
+            />
+
             <SectionLp1 />
 
             <SectionLp2 />

@@ -1,6 +1,6 @@
 import styles from '../../styles/modules/politicasPage.module.css';
 
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/common/logo.webp';
 
 import { NavLink } from 'react-router-dom';
 

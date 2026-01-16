@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 import { BurgerIcon } from '../../assets/icons/BurgerIcon';
 
-import LogoBurger from '../../assets/images/logo.png';
+import logo from '../../assets/images/common/logo.webp';
 
 import { navLinks } from '../utils/NavBarMenu';
 
@@ -76,7 +76,7 @@ export const BurgerMenu = () => {
                     {/* LOGO  */}
 
                     <div className="logo-mobile-menu">
-                        <img src={LogoBurger} alt="Logotipo de Foodie Guru" loading="lazy" decoding="async" />
+                        <img src={logo} alt="Logotipo de Foodie Guru" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>

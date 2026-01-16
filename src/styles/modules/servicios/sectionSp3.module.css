@@ -36,27 +36,8 @@
 }
 
 @media (min-width: 576px) {
-    .sectionContainer {
-        padding-top: 20px;
-        padding-bottom: 60px;
-        gap: 40px;
-    }
-
     .sectionContainer p {
         width: 510px;
-        font-size: 16px;
-    }
-
-    .sectionContainer img {
-        width: 250px;
-    }
-
-    .sectionContenido {
-        gap: 20px;
-    }
-
-    .sectionContenido h2 {
-        font-size: 32px;
     }
 }
 
@@ -67,17 +48,8 @@
         gap: 60px;
     }
 
-    .sectionContainer p {
-        width: 510px;
-        font-size: 16px;
-    }
-
     .sectionContainer img {
         width: 300px;
-    }
-
-    .sectionContenido {
-        gap: 20px;
     }
 
     .sectionContenido h2 {

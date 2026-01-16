@@ -44,9 +44,6 @@
 @media (min-width: 768px) {
     .sectionContainer {
         flex-direction: row;
-        padding-top: 40px;
-        padding-bottom: 60px;
-        gap: 40px;
     }
 
     .sectionTitulo {
@@ -59,12 +56,6 @@
 
     .sectionTitulo p {
         font-size: 18px;
-    }
-
-    .sectionContenido p {
-        text-align: justify;
-        font-size: 16px;
-        width: 325px;
     }
 }
 
@@ -74,35 +65,12 @@
         padding-bottom: 100px;
         gap: 60px;
     }
-
-    .sectionTitulo {
-        gap: 40px;
-    }
-
-    .sectionTitulo h2 {
-        font-size: 66px;
-    }
-
-    .sectionTitulo p {
-        font-size: 18px;
-    }
-
-    .sectionContenido p {
-        text-align: justify;
-        font-size: 16px;
-        width: 325px;
-    }
 }
 
 @media (min-width: 1400px) {
     .sectionContainer {
         padding-top: 100px;
         padding-bottom: 120px;
-        gap: 60px;
-    }
-
-    .sectionTitulo {
-        gap: 40px;
     }
 
     .sectionTitulo h2 {
@@ -114,7 +82,6 @@
     }
 
     .sectionContenido p {
-        text-align: justify;
         font-size: 18px;
         width: 365px;
     }

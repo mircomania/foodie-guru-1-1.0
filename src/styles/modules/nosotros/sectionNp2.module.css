@@ -98,41 +98,8 @@
         flex: 0 0 392px;
     }
 
-    .persona {
-        border: 2px solid var(--dark-color);
-        border-top-width: 4px;
-        padding: 10px;
-    }
-
-    .persona h3 {
-        font-size: 22px;
-    }
-
-    .persona h4 {
-        font-size: 16px;
-    }
-
-    .imageContainer {
-        border: 2px solid var(--dark-color);
-    }
-
     .imageContainer img {
         width: 392px;
-    }
-
-    .imageContainer span {
-        font-size: 16px;
-        padding: 40px 20px;
-    }
-
-    .dots {
-        gap: 8px;
-        margin-top: 20px;
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
     }
 }
 
@@ -141,84 +108,14 @@
         flex: 0 0 433px;
     }
 
-    .persona {
-        border: 2px solid var(--dark-color);
-        border-top-width: 4px;
-        padding: 10px;
-    }
-
-    .persona h3 {
-        font-size: 22px;
-    }
-
-    .persona h4 {
-        font-size: 16px;
-    }
-
-    .imageContainer {
-        border: 2px solid var(--dark-color);
-    }
-
     .imageContainer img {
         width: 433px;
-    }
-
-    .imageContainer span {
-        font-size: 16px;
-        padding: 40px 20px;
-    }
-
-    .dots {
-        gap: 8px;
-        margin-top: 20px;
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
     }
 }
 
 @media (min-width: 992px) {
     .card {
         flex: 0 0 478px;
-    }
-
-    .persona {
-        border: 2px solid var(--dark-color);
-        border-top-width: 4px;
-        padding: 10px;
-    }
-
-    .persona h3 {
-        font-size: 22px;
-    }
-
-    .persona h4 {
-        font-size: 16px;
-    }
-
-    .imageContainer {
-        border: 2px solid var(--dark-color);
-    }
-
-    .imageContainer img {
-        width: 433px;
-    }
-
-    .imageContainer span {
-        font-size: 16px;
-        padding: 40px 20px;
-    }
-
-    .dots {
-        gap: 8px;
-        margin-top: 20px;
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
     }
 }
 
@@ -235,22 +132,8 @@
         width: 100%;
     }
 
-    .persona {
-        border: 2px solid var(--dark-color);
-        border-top-width: 4px;
-        padding: 10px;
-    }
-
-    .persona h3 {
-        font-size: 22px;
-    }
-
     .persona h4 {
         font-size: 12px;
-    }
-
-    .imageContainer {
-        border: 2px solid var(--dark-color);
     }
 
     .imageContainer img {
@@ -259,46 +142,20 @@
 
     .imageContainer span {
         font-size: 13px;
-        padding: 40px 20px;
     }
 }
 
 @media (min-width: 1400px) {
-    .persona {
-        border: 2px solid var(--dark-color);
-        border-top-width: 4px;
-        padding: 10px;
-    }
-
-    .persona h3 {
-        font-size: 22px;
-    }
-
     .persona h4 {
         font-size: 14px;
     }
 
-    .imageContainer {
-        border: 2px solid var(--dark-color);
-    }
-
-    .imageContainer img {
-        width: 100%;
-    }
-
     .imageContainer span {
         font-size: 15px;
-        padding: 40px 20px;
     }
 }
 
 @media (min-width: 1700px) {
-    .persona {
-        border: 2px solid var(--dark-color);
-        border-top-width: 4px;
-        padding: 10px;
-    }
-
     .persona h3 {
         font-size: 28px;
     }
@@ -307,16 +164,7 @@
         font-size: 16px;
     }
 
-    .imageContainer {
-        border: 2px solid var(--dark-color);
-    }
-
-    .imageContainer img {
-        width: 100%;
-    }
-
     .imageContainer span {
         font-size: 18px;
-        padding: 40px 20px;
     }
 }

@@ -78,8 +78,6 @@
 
 @media (min-width: 992px) {
     .sectionContainer {
-        padding-top: 40px;
-        padding-bottom: 60px;
         gap: 40px;
     }
 
@@ -92,22 +90,10 @@
         left: 0;
         width: 100%;
         height: 3px;
-        stroke-width: 2;
     }
 
     .items {
         flex-direction: row;
-        gap: 30px;
-    }
-
-    .item {
-        width: 160px;
-        height: 160px;
-        padding: 10px;
-    }
-
-    .item h3 {
-        font-size: 16px;
     }
 }
 
@@ -121,47 +107,11 @@
     .sectionContainer h2 {
         font-size: 62px;
     }
-
-    .line {
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        stroke-width: 2;
-    }
-
-    .items {
-        gap: 30px;
-    }
-
-    .item {
-        width: 160px;
-        height: 160px;
-        padding: 10px;
-    }
-
-    .item h3 {
-        font-size: 16px;
-    }
 }
 
 @media (min-width: 1400px) {
-    .sectionContainer {
-        padding-top: 60px;
-        padding-bottom: 80px;
-        gap: 60px;
-    }
-
     .sectionContainer h2 {
         font-size: 70px;
-    }
-
-    .line {
-        top: 50%;
-        left: 0;
-        width: 100%;
-        height: 3px;
-        stroke-width: 2;
     }
 
     .items {
@@ -171,7 +121,6 @@
     .item {
         width: 180px;
         height: 180px;
-        padding: 10px;
     }
 
     .item h3 {

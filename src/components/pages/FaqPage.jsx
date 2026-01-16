@@ -2,7 +2,7 @@ import { TitleSEO } from '../utils/TitleSEO';
 
 import styles from '../../styles/modules/faqPage.module.css';
 
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/common/logo.webp';
 
 import { getFaqStructuredData } from '../utils/getFaqStructuredData';
 import { faqData } from '../utils/faqData';

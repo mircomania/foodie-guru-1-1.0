@@ -1,4 +1,4 @@
-import Logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/common/logo.webp';
 
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -23,7 +23,7 @@ export const Footer = () => {
             <div className="contenido-footer">
                 <div className="logo-contacto alliance-text">
                     <a to="/" aria-label="Ir a la página de inicio" data-link="footer-logo-btn" onClick={handleLogoClick}>
-                        <img src={Logo} alt="Logotipo de Foodie Guru en el pie de página" />
+                        <img src={logo} alt="Logotipo de Foodie Guru en el pie de página" />
                     </a>
 
                     <p>Envíanos un mensaje</p>

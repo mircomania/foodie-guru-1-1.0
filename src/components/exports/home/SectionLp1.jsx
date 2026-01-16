@@ -1,6 +1,6 @@
 import styles from '../../../styles/modules/home/sectionLp1.module.css';
 
-import img from '../../../assets/images/img-lp-section-1-1.png';
+import img from '../../../assets/images/sectionLp1/img-lp-section-1-1.webp';
 
 import { BotonNav } from '../../utils/BotonNav';
 

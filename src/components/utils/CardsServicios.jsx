@@ -1,9 +1,9 @@
-import img1Mov from '../../assets/images/sectionSp2/img-sp-section-2-1.png';
-import img1Web from '../../assets/images/sectionSp2/img-sp-section-2-1-2.png';
-import img2Mov from '../../assets/images/sectionSp2/img-sp-section-2-2.png';
-import img2Web from '../../assets/images/sectionSp2/img-sp-section-2-2-2.png';
-import img3Mov from '../../assets/images/sectionSp2/img-sp-section-2-3.png';
-import img3Web from '../../assets/images/sectionSp2/img-sp-section-2-3-2.png';
+import img1Mov from '../../assets/images/sectionSp2/img-sp-section-2-1.webp';
+import img1Web from '../../assets/images/sectionSp2/img-sp-section-2-1-2.webp';
+import img2Mov from '../../assets/images/sectionSp2/img-sp-section-2-2.webp';
+import img2Web from '../../assets/images/sectionSp2/img-sp-section-2-2-2.webp';
+import img3Mov from '../../assets/images/sectionSp2/img-sp-section-2-3.webp';
+import img3Web from '../../assets/images/sectionSp2/img-sp-section-2-3-2.webp';
 
 export const CardsServicios = [
     {

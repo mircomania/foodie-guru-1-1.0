@@ -1,8 +1,8 @@
-import img1 from '../../assets/images/img-np-section-3-1.png';
-import img2 from '../../assets/images/img-np-section-3-2.png';
-import img3 from '../../assets/images/img-np-section-3-3.png';
-import img4 from '../../assets/images/img-np-section-3-4.png';
-import img5 from '../../assets/images/img-np-section-3-5.png';
+import img1 from '../../assets/images/sectionNp2/img-np-section-3-1.webp';
+import img2 from '../../assets/images/sectionNp2/img-np-section-3-2.webp';
+import img3 from '../../assets/images/sectionNp2/img-np-section-3-3.webp';
+import img4 from '../../assets/images/sectionNp2/img-np-section-3-4.webp';
+import img5 from '../../assets/images/sectionNp2/img-np-section-3-5.webp';
 
 export const CardsNosoros = [
     {

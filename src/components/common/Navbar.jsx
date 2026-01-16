@@ -1,4 +1,4 @@
-import Logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/common/logo.webp';
 
 import { NavLink } from 'react-router-dom';
 
@@ -16,7 +16,7 @@ export const Navbar = () => {
 
                 <div className="logo-container">
                     <NavLink to="/" aria-label="Ir a la página principal" data-link="navbar-logo-btn">
-                        <img src={Logo} alt="Logotipo de Foodie Guru" className="logo-navbar" />
+                        <img src={logo} alt="Logotipo de Foodie Guru" className="logo-navbar" />
                     </NavLink>
                 </div>
 

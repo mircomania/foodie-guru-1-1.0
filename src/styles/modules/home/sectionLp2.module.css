@@ -56,14 +56,8 @@
 }
 
 @media (min-width: 992px) {
-    .sectionContainer {
-        gap: 70px;
-    }
-
     .contenidoInfo {
         width: 400px;
-        gap: 30px;
-        margin-bottom: 40px;
     }
 
     .contenidoInfo h2 {
@@ -93,7 +87,6 @@
 
     .contenidoInfo {
         width: 500px;
-        gap: 30px;
         margin-bottom: 80px;
     }
 

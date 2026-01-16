@@ -1,6 +1,6 @@
 import styles from '../../../styles/modules/servicios/sectionSp3.module.css';
 
-import img from '../../../assets/images/sectionSp3/img-sp-section-3-1.png';
+import img from '../../../assets/images/sectionSp3/img-sp-section-3-1.webp';
 
 import { BotonNav } from '../../utils/BotonNav';
 
