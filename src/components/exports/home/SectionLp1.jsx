@@ -1,6 +1,6 @@
 import styles from '../../../styles/modules/home/sectionLp1.module.css';
 
-import img from '../../../assets/images/sectionLp1/img-lp-section-1-1.webp';
+import img from '../../../assets/images/sectionLp1/img-lp-section-1-1.png';
 
 import { BotonNav } from '../../utils/BotonNav';
 
@@ -8,6 +8,8 @@ export const SectionLp1 = () => {
     return (
         <section className={styles.sectionContainer}>
             <div className={styles.contenido1}>
+                <img src={img} alt="CEO de Foodie Guru" />
+
                 <h1 className="formula-bold">
                     <span className={styles.titulo1}>
                         EXPERTOS EN
@@ -22,7 +24,7 @@ export const SectionLp1 = () => {
                     </span>
                 </h1>
 
-                <img src={img} alt="CEO de Foodie Guru" />
+                <h2 className="amsterdam-light">Despacho consultoria de restaurantes</h2>
             </div>
 
             <div className={styles.contenido2}>

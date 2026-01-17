@@ -26,7 +26,7 @@ export const SectionLp3 = () => {
             video.removeEventListener('play', onPlay);
             video.removeEventListener('pause', onPause);
         };
-    }, []);
+    }, [videoRef]);
 
     useEffect(() => {
         const video = videoRef.current;
@@ -41,7 +41,7 @@ export const SectionLp3 = () => {
         return () => {
             video.removeEventListener('volumechange', onVolumeChange);
         };
-    }, []);
+    }, [videoRef]);
 
     const toggleMute = () => {
         const video = videoRef.current;
@@ -68,7 +68,6 @@ export const SectionLp3 = () => {
                 playsInline
                 poster="/foodie-guru-1-1.0/videos/video-home.jpg"
             >
-                <source src="/foodie-guru-1-1.0/videos/video-home.webm" type="video/webm" />
                 <source src="/foodie-guru-1-1.0/videos/video-home.mp4" type="video/mp4" />
             </video>
 

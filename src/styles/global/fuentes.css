@@ -1,7 +1,9 @@
 /* FORMULA LIGHT (300) */
 @font-face {
     font-family: 'Formula';
-    src: url('/fonts/FormulaCondensed-Light.woff2') format('woff2'), url('/fonts/FormulaCondensed-Light.woff') format('woff');
+    src:
+        url('/fonts/FormulaCondensed-Light.woff2') format('woff2'),
+        url('/fonts/FormulaCondensed-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -10,7 +12,9 @@
 /* FORMULA BOLD (700) */
 @font-face {
     font-family: 'Formula';
-    src: url('/fonts/FormulaCondensed-Bold.woff2') format('woff2'), url('/fonts/FormulaCondensed-Bold.woff') format('woff');
+    src:
+        url('/fonts/FormulaCondensed-Bold.woff2') format('woff2'),
+        url('/fonts/FormulaCondensed-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -19,7 +23,9 @@
 /* ALLIANCE NO.2 */
 @font-face {
     font-family: 'Alliance';
-    src: url('/fonts/AllianceNo2-Light.woff2') format('woff2'), url('/fonts/AllianceNo2-Light.woff') format('woff');
+    src:
+        url('/fonts/AllianceNo2-Light.woff2') format('woff2'),
+        url('/fonts/AllianceNo2-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -28,7 +34,9 @@
 /* POPPINS SEMIBOLD (600) */
 @font-face {
     font-family: 'Poppins';
-    src: url('/fonts/Poppins-SemiBold.woff2') format('woff2'), url('/fonts/Poppins-SemiBold.woff') format('woff');
+    src:
+        url('/fonts/Poppins-SemiBold.woff2') format('woff2'),
+        url('/fonts/Poppins-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -37,10 +45,30 @@
 /* PERMANENT MARKER */
 @font-face {
     font-family: 'PermanentMarker';
-    src: url('/fonts/PermanentMarker-Regular.woff2') format('woff2'), url('/fonts/PermanentMarker-Regular.woff') format('woff');
+    src:
+        url('/fonts/PermanentMarker-Regular.woff2') format('woff2'),
+        url('/fonts/PermanentMarker-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
+}
+
+/* AMSTERDAM */
+@font-face {
+    font-family: 'Amsterdam';
+    src:
+        url('/fonts/Amsterdam-400.woff2') format('woff2'),
+        url('/fonts/Amsterdam-400.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* CLASE */
+.amsterdam-light {
+    font-family: 'Amsterdam', sans-serif;
+    font-weight: 400;
+    text-shadow: 2px 2px 4px var(--shadow-color);
 }
 
 /* FORMULA */
