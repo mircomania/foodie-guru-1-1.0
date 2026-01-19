@@ -15,7 +15,7 @@
     min-height: calc(100svh - 69px);
     gap: 20px;
     padding-top: 20px;
-    padding-bottom: 40px;
+    padding-bottom: 120px;
 }
 
 .contenido1 img {
@@ -45,7 +45,8 @@
 .contenido1 h2 {
     z-index: 1;
     color: var(--white-color);
-    font-size: 20px;
+    font-size: 18px;
+    margin-right: 30px;
 }
 
 .contenido2 {
@@ -98,6 +99,7 @@
         position: absolute;
         bottom: 20px;
         width: auto;
+        margin-right: 0px;
     }
 
     .contenido2 p {

@@ -1,14 +1,10 @@
 import { useState, useEffect } from 'react';
 
-import { PhoneNumberUtil } from 'google-libphonenumber';
-
 export const useForm = (initialState, { onSuccess = () => {}, onError = () => {} } = {}) => {
     const [formData, setFormData] = useState(initialState);
     const [errors, setErrors] = useState({});
     const [loading, setLoading] = useState(false);
     const [utmParams, setUtmParams] = useState({});
-
-    const phoneUtil = PhoneNumberUtil.getInstance();
 
     useEffect(() => {
         const DAYS_TO_EXPIRE = 15;
@@ -44,21 +40,19 @@ export const useForm = (initialState, { onSuccess = () => {}, onError = () => {}
     const handleChange = (e) => {
         const { name, value } = e.target;
 
-        if (name === 'telefono') {
-            setFormData((prev) => ({ ...prev, telefono: value }));
-        } else {
-            setFormData((prev) => ({ ...prev, [name]: value }));
-        }
+        setFormData((prev) => ({ ...prev, [name]: value }));
 
         setErrors((prev) => {
-            return Object.fromEntries(Object.entries(prev).filter(([key]) => key !== name));
+            const { [name]: removed, ...rest } = prev;
+            return rest;
         });
     };
 
     const updateField = (name, value) => {
         setFormData((prev) => ({ ...prev, [name]: value }));
         setErrors((prev) => {
-            return Object.fromEntries(Object.entries(prev).filter(([key]) => key !== name));
+            const { [name]: removed, ...rest } = prev;
+            return rest;
         });
     };
 
@@ -95,25 +89,19 @@ export const useForm = (initialState, { onSuccess = () => {}, onError = () => {}
     };
 
     const validateTelefono = (newErrors) => {
-        try {
-            const number = phoneUtil.parse(formData.telefono);
-            if (!phoneUtil.isValidNumber(number)) {
-                newErrors.telefono = true;
-            }
-        } catch (e) {
+        const isValidPhone = /^\+(52|1)\d{10}$/.test(formData.telefono);
+
+        if (!isValidPhone) {
             newErrors.telefono = true;
         }
     };
+
     const validateInteresado = (newErrors) => {
-        if (!formData.interesado.trim() || formData.interesado === 'Interesado en') {
-            newErrors.interesado = true;
-        }
+        if (!formData.interesado) newErrors.interesado = true;
     };
 
     const validateVenta = (newErrors) => {
-        if (!formData.venta.trim() || formData.venta === '¿Cuál es la venta mensual de tu negocio?') {
-            newErrors.venta = true;
-        }
+        if (!formData.venta) newErrors.venta = true;
     };
 
     const validateCiudad = (newErrors) => {
@@ -169,10 +157,7 @@ export const useForm = (initialState, { onSuccess = () => {}, onError = () => {}
         setFormData({
             ...initialState,
             telefono: '+52',
-            interesado: '',
-            venta: '',
         });
-        setErrors({});
     };
 
     return { formData, errors, loading, handleChange, updateField, handleSubmit };

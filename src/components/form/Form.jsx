@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 import styles from '../../styles/modules/form.module.css';
 
@@ -12,39 +12,37 @@ import { CustomSelect } from './CustomSelect';
 import { ventas } from './ventasForm';
 import { interesado } from './interesadoForm';
 
-import Swal from 'sweetalert2';
+let SwalPromise;
+
+const loadSwal = () => {
+    if (!SwalPromise) {
+        SwalPromise = import('sweetalert2').then((m) => m.default);
+    }
+    return SwalPromise;
+};
+
+const baseSwalConfig = {
+    scrollbarPadding: false,
+    customClass: {
+        popup: 'swal-custom-popup',
+        title: 'swal-custom-title',
+        htmlContainer: 'swal-custom-text',
+        confirmButton: 'swal-custom-confirm',
+        cancelButton: 'swal-custom-cancel',
+    },
+};
 
 export const Form = () => {
-    const [hideErrorOnFocus, setHideErrorOnFocus] = useState({});
-
-    const handleFocusRemoveError = (field) => {
-        setHideErrorOnFocus((prev) => ({
-            ...prev,
-            [field]: true,
-        }));
-    };
-
     const [showPhoneUI, setShowPhoneUI] = useState(false);
 
-    const ventasOptions = ventas.map((e) => ({ value: e, label: e }));
-    const interesadosOptions = interesado.map((e) => ({ value: e, label: e }));
+    const ventasOptions = useMemo(() => ventas.map((e) => ({ value: e, label: e })), []);
 
-    const baseSwalConfig = useMemo(
-        () => ({
-            scrollbarPadding: false,
-            customClass: {
-                popup: 'swal-custom-popup',
-                title: 'swal-custom-title',
-                htmlContainer: 'swal-custom-text',
-                confirmButton: 'swal-custom-confirm',
-                cancelButton: 'swal-custom-cancel',
-            },
-        }),
-        []
-    );
+    const interesadosOptions = useMemo(() => interesado.map((e) => ({ value: e, label: e })), []);
 
-    const showSuccessAlert = useCallback(() => {
-        Swal.fire({
+    const showSuccessAlert = useCallback(async () => {
+        const Swal = await loadSwal();
+
+        const result = await Swal.fire({
             ...baseSwalConfig,
             title: '¡Datos enviados correctamente!',
             text: '¿Quieres agendar una cita?',
@@ -56,15 +54,17 @@ export const Form = () => {
                 ...baseSwalConfig.customClass,
                 popup: 'swal-custom-popup swal-success-popup',
             },
-        }).then((result) => {
-            if (result.isConfirmed) {
-                window.open('https://calendly.com/charly-foodieguru/microanalisis-foodie-guru-consulting', '_blank');
-            }
         });
-    }, [baseSwalConfig]);
 
-    const showErrorAlert = useCallback(() => {
-        Swal.fire({
+        if (result.isConfirmed) {
+            window.open('https://calendly.com/charly-foodieguru/microanalisis-foodie-guru-consulting', '_blank');
+        }
+    }, []);
+
+    const showErrorAlert = useCallback(async () => {
+        const Swal = await loadSwal();
+
+        await Swal.fire({
             ...baseSwalConfig,
             title: 'Ups',
             text: 'Hubo un error al enviar los datos.',
@@ -77,7 +77,7 @@ export const Form = () => {
                 confirmButton: 'swal-custom-confirm swal-error-confirm',
             },
         });
-    }, [baseSwalConfig]);
+    }, []);
 
     const { formData, errors, loading, handleChange, updateField, handleSubmit } = useForm(
         {
@@ -92,16 +92,8 @@ export const Form = () => {
         {
             onSuccess: showSuccessAlert,
             onError: showErrorAlert,
-        }
+        },
     );
-
-    useEffect(() => {
-        const newState = {};
-        Object.keys(errors).forEach((field) => {
-            newState[field] = false;
-        });
-        setHideErrorOnFocus(newState);
-    }, [errors]);
 
     return (
         <form onSubmit={handleSubmit} className={styles.form} noValidate>
@@ -114,12 +106,11 @@ export const Form = () => {
                 <input
                     placeholder="Nombre y Apellido"
                     type="text"
-                    className={`${styles.formControl} ${errors.nombre && !hideErrorOnFocus.nombre ? styles.errorInput : ''}`}
+                    className={`${styles.formControl} ${errors.nombre ? styles.errorInput : ''}`}
                     id="nombre"
                     name="nombre"
                     value={formData.nombre}
                     onChange={handleChange}
-                    onFocus={() => handleFocusRemoveError('nombre')}
                     required
                     aria-invalid={!!errors.nombre}
                 />
@@ -133,12 +124,11 @@ export const Form = () => {
                 <input
                     placeholder="Email"
                     type="email"
-                    className={`${styles.formControl} ${errors.email && !hideErrorOnFocus.email ? styles.errorInput : ''}`}
+                    className={`${styles.formControl} ${errors.email ? styles.errorInput : ''}`}
                     id="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    onFocus={() => handleFocusRemoveError('email')}
                     autoComplete="email"
                     required
                     aria-invalid={!!errors.email}
@@ -155,13 +145,12 @@ export const Form = () => {
                     value={formData.telefono}
                     onFocus={() => {
                         setShowPhoneUI(true);
-                        handleFocusRemoveError('telefono');
                     }}
                     onChange={(phone) => {
                         const formatted = phone ? `+${phone}` : '';
                         handleChange({ target: { name: 'telefono', value: formatted } });
                     }}
-                    inputClass={`${styles.formControl} ${errors.telefono && !hideErrorOnFocus.telefono ? styles.errorInput : ''}`}
+                    inputClass={`${styles.formControl} ${errors.telefono ? styles.errorInput : ''}`}
                     containerClass={showPhoneUI ? 'phone-visible' : 'phone-hidden'}
                     inputProps={{
                         name: 'telefono',
@@ -206,12 +195,11 @@ export const Form = () => {
                 <input
                     placeholder="Ciudad de la que nos contactas"
                     type="text"
-                    className={`${styles.formControl} ${errors.ciudad && !hideErrorOnFocus.ciudad ? styles.errorInput : ''}`}
+                    className={`${styles.formControl} ${errors.ciudad ? styles.errorInput : ''}`}
                     id="ciudad"
                     name="ciudad"
                     value={formData.ciudad}
                     onChange={handleChange}
-                    onFocus={() => handleFocusRemoveError('ciudad')}
                     required
                     aria-invalid={!!errors.ciudad}
                 />
