@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow-x: hidden;
     background-color: var(--dark-color);
 }
 
@@ -35,6 +36,7 @@
 }
 
 .titulo1 {
+    display: inline-block;
     color: var(--yellow-color);
 }
 

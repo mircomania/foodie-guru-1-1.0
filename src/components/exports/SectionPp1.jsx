@@ -4,6 +4,8 @@ import logo from '../../assets/images/common/logo.webp';
 
 import { NavLink } from 'react-router-dom';
 
+import { ScrollReveal } from '../utils/ScrollReveal';
+
 import { BotonNav } from '../utils/BotonNav';
 
 const POLITICAS_LINK = (
@@ -16,7 +18,9 @@ export const SectionPp1 = () => {
     return (
         <section className={styles.sectionContainer}>
             <header className={styles.sectionTitulo}>
-                <img src={logo} alt="Logotipo de Foodie Guru" />
+                <ScrollReveal mode="clone" from="left" distance={30} duration={1} threshold={0.1}>
+                    <img src={logo} alt="Logotipo de Foodie Guru" />
+                </ScrollReveal>
 
                 <h1 className="formula-bold">Política de privacidad</h1>
 

@@ -1,6 +1,7 @@
 import { TitleSEO } from '../utils/TitleSEO';
 
 import styles from '../../styles/modules/contactoPage.module.css';
+import { ScrollReveal } from '../utils/ScrollReveal';
 
 import { Form } from '../form/Form';
 
@@ -15,7 +16,9 @@ const ContactoPage = () => {
 
             <section className={styles.sectionContainer}>
                 <div className={styles.sectionTitulo}>
-                    <h1 className="formula-bold">¡HEY FOODIE!</h1>
+                    <ScrollReveal mode="clone" from="right" distance={30} duration={1} threshold={0.1}>
+                        <h1 className="formula-bold">¡HEY FOODIE!</h1>
+                    </ScrollReveal>
 
                     <p className="alliance-text">
                         Llena este formulario y AGENDA UNA SESIÓN con Charly Zapata, nuestro Director General.

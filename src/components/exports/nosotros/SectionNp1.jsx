@@ -1,12 +1,16 @@
 import styles from '../../../styles/modules/nosotros/sectionNp1.module.css';
 
+import { ScrollReveal } from '../../utils/ScrollReveal';
+
 export const SectionNp1 = () => {
     return (
         <section className={styles.sectionContainer}>
             <header className={styles.sectionTitle}>
-                <h1 className="formula-bold">
-                    TEAM <br /> <span className={styles.foodie}>FOODIE GURÚ</span>
-                </h1>
+                <ScrollReveal mode="clone" from="top" distance={20} duration={1}>
+                    <h1 className="formula-bold">
+                        TEAM <br /> <span className={styles.foodie}>FOODIE GURÚ</span>
+                    </h1>
+                </ScrollReveal>
 
                 <div className={styles.fondoTitle}></div>
             </header>

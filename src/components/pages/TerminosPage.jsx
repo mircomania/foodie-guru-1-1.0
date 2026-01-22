@@ -7,6 +7,8 @@ import logo from '../../assets/images/common/logo.webp';
 import { termsData } from '../utils/terminosData';
 import { ParseTextToJSX } from '../utils/ParseTextToJSX';
 
+import { ScrollReveal } from '../utils/ScrollReveal';
+
 import { BotonNav } from '../utils/BotonNav';
 
 const TerminosPage = () => {
@@ -22,7 +24,9 @@ const TerminosPage = () => {
                 <header className={styles.sectionTitulo}>
                     <h1 className="formula-bold">TÉRMINOS Y CONDICIONES</h1>
 
-                    <img src={logo} alt="Logotipo de Foodie Guru" />
+                    <ScrollReveal mode="clone" from="left" distance={30} duration={1} threshold={0.1}>
+                        <img src={logo} alt="Logotipo de Foodie Guru" />
+                    </ScrollReveal>
                 </header>
 
                 <div className={styles.sectionContenido}>

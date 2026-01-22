@@ -1,5 +1,7 @@
 import styles from '../../../styles/modules/nosotros/sectionNp4.module.css';
 
+import { ScrollReveal } from '../../utils/ScrollReveal';
+
 export const SectionNp4 = () => {
     return (
         <section className={styles.sectionContainer}>
@@ -11,7 +13,9 @@ export const SectionNp4 = () => {
                 ESTRATEGIA, TRASCIENDEN.&quot;
             </h2>
 
-            <h3 className="formula-bold">- FOODIE GURÚ</h3>
+            <ScrollReveal mode="clone" from="left" distance={20} duration={1}>
+                <h3 className="formula-bold">- FOODIE GURÚ</h3>
+            </ScrollReveal>
         </section>
     );
 };

@@ -3,28 +3,35 @@ import styles from '../../../styles/modules/home/sectionLp1.module.css';
 import img from '../../../assets/images/sectionLp1/img-lp-section-1-1.png';
 
 import { BotonNav } from '../../utils/BotonNav';
+import { ScrollReveal } from '../../utils/ScrollReveal';
 
 export const SectionLp1 = () => {
     return (
         <section className={styles.sectionContainer}>
             <div className={styles.contenido1}>
-                <img src={img} alt="CEO de Foodie Guru" />
+                <ScrollReveal mode="clone" from="right" distance={30} duration={1}>
+                    <img src={img} alt="CEO de Foodie Guru" />
+                </ScrollReveal>
 
-                <h1 className="formula-bold">
-                    <span className={styles.titulo1}>
-                        EXPERTOS EN
-                        <br />
-                        RESTAURANTES
-                    </span>
-                    <span className={styles.titulo2}>
-                        <br />
-                        Y DUEÑOS DE
-                        <br />
-                        RESTAURANTES
-                    </span>
-                </h1>
+                <ScrollReveal mode="clone" from="left" distance={30} duration={1}>
+                    <h1 className="formula-bold">
+                        <span className={styles.titulo1}>
+                            EXPERTOS EN
+                            <br />
+                            RESTAURANTES
+                        </span>
+                        <span className={styles.titulo2}>
+                            <br />
+                            Y DUEÑOS DE
+                            <br />
+                            RESTAURANTES
+                        </span>
+                    </h1>
+                </ScrollReveal>
 
-                <h2 className="amsterdam-light">Despacho consultoria de restaurantes</h2>
+                <ScrollReveal mode="clone" from="bottom" distance={20} duration={1}>
+                    <h2 className="amsterdam-light">Despacho consultoria de restaurantes</h2>
+                </ScrollReveal>
             </div>
 
             <div className={styles.contenido2}>

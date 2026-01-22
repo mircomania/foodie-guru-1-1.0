@@ -10,6 +10,8 @@ import { ParseTextToJSX } from '../utils/ParseTextToJSX';
 
 import { BotonNav } from '../utils/BotonNav';
 
+import { ScrollReveal } from '../utils/ScrollReveal';
+
 import { HelmetProvider } from 'react-helmet-async';
 
 const faqStructuredData = getFaqStructuredData(faqData);
@@ -31,7 +33,9 @@ const FaqPage = () => {
                 <header className={styles.sectionTitulo}>
                     <h1 className="formula-bold">PREGUNTAS FRECUENTES</h1>
 
-                    <img src={logo} alt="Logotipo de Foodie Guru" />
+                    <ScrollReveal mode="clone" from="left" distance={30} duration={1} threshold={0.1}>
+                        <img src={logo} alt="Logotipo de Foodie Guru" />
+                    </ScrollReveal>
                 </header>
 
                 {/* PREGUNTAS */}

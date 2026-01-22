@@ -1,5 +1,7 @@
 import styles from '../../../styles/modules/home/sectionLp7.module.css';
 
+import { ScrollReveal } from '../../utils/ScrollReveal';
+
 export const SectionLp7 = () => {
     return (
         <section className={styles.sectionContainer}>
@@ -10,15 +12,17 @@ export const SectionLp7 = () => {
                     FOODIE GURÚ?
                 </h2>
 
-                <p className="marker-text">
-                    &quot;PARA ROMPER
-                    <br />
-                    LAS REGLAS
-                    <br />
-                    PRIMERO HAY QUE
-                    <br />
-                    CONOCERLAS&quot;
-                </p>
+                <ScrollReveal mode="wrap" from="left" distance={100}>
+                    <p className="marker-text">
+                        &quot;PARA ROMPER
+                        <br />
+                        LAS REGLAS
+                        <br />
+                        PRIMERO HAY QUE
+                        <br />
+                        CONOCERLAS&quot;
+                    </p>
+                </ScrollReveal>
             </header>
 
             <div className={styles.sectionContenido}>

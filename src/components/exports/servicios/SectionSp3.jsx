@@ -4,6 +4,8 @@ import img from '../../../assets/images/sectionSp3/img-sp-section-3-1.webp';
 
 import { BotonNav } from '../../utils/BotonNav';
 
+import { ScrollReveal } from '../../utils/ScrollReveal';
+
 export const SectionSp3 = () => {
     return (
         <section className={styles.sectionContainer}>
@@ -12,7 +14,9 @@ export const SectionSp3 = () => {
                 y en qué puedes mejorar para hacer crecer tu restaurante.
             </p>
 
-            <img src={img} alt="Carta misteriosa de Foodie Guru" />
+            <ScrollReveal mode="clone" from="top" distance={50} duration={1}>
+                <img src={img} alt="Carta misteriosa de Foodie Guru" />
+            </ScrollReveal>
 
             <div className={styles.sectionContenido}>
                 <h2 className="formula-bold">

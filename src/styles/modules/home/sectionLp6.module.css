@@ -107,6 +107,14 @@
     .sectionContainer h2 {
         font-size: 62px;
     }
+
+    .line line {
+        stroke: var(--dark-color);
+        stroke-width: 2;
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        transition: stroke-dashoffset 2.5s ease-out;
+    }
 }
 
 @media (min-width: 1400px) {

@@ -3,6 +3,7 @@ import styles from '../../../styles/modules/home/sectionLp2.module.css';
 import img from '../../../assets/images/sectionLp2/img-lp-section-2-1.webp';
 
 import { BotonNav } from '../../utils/BotonNav';
+import { ScrollScrub } from '../../utils/ScrollScrub';
 
 export const SectionLp2 = () => {
     return (
@@ -18,7 +19,9 @@ export const SectionLp2 = () => {
                 <BotonNav dataCta="inicio-2-btn">Contactános</BotonNav>
             </div>
 
-            <img src={img} alt="Tenedor elegante enrollando espagueti" />
+            <ScrollScrub from={{ x: 0, y: 150 }} to={{ x: 0, y: 0 }} start={0.99} end={0.1}>
+                <img src={img} alt="Tenedor elegante enrollando espagueti" data-scroll-scrub />
+            </ScrollScrub>
         </section>
     );
 };
