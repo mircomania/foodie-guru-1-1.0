@@ -129,8 +129,8 @@ export const useForm = (initialState, { onSuccess = () => {}, onError = () => {}
                 comentario: formData.comentario,
                 ...utmWithoutTimestamp,
             };
-            //'http://localhost:5000/submit'
-            const response = await fetch('http://localhost:5000/api/submit', {
+            //'http://localhost:5000/submit http://localhost:5000/api/submit'
+            const response = await fetch('backend/submit.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(formDataToSend),

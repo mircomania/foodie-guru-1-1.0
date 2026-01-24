@@ -16,6 +16,8 @@
 }
 
 .sectionContainer img {
+    user-select: none;
+    pointer-events: none;
     width: 250px;
 }
 

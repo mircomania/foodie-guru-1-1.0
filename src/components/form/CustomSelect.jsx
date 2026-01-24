@@ -1,5 +1,4 @@
-import { useMediaQuery } from '../../hooks/UseMediaQuery';
-import { useMemo, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 import styles from '../../styles/modules/form.module.css';
 import { StylesSelect } from './StylesSelect';
@@ -8,17 +7,6 @@ import Select from 'react-select';
 import PropTypes from 'prop-types';
 
 export const CustomSelect = ({ label, name, options, value, onChange, error, placeholder }) => {
-    const isWide = useMediaQuery('(min-width: 1400px)');
-    const isMedium = useMediaQuery('(min-width: 992px) and (max-width: 1399px)');
-
-    const breakpoint = useMemo(() => {
-        if (isWide) return 'wide';
-        if (isMedium) return 'medium';
-        return 'small';
-    }, [isWide, isMedium]);
-
-    const customStyles = useMemo(() => StylesSelect(breakpoint), [breakpoint]);
-
     // --- Control VISUAL del error ---
     const [showErrorStyle, setShowErrorStyle] = useState(true);
 
@@ -27,7 +15,7 @@ export const CustomSelect = ({ label, name, options, value, onChange, error, pla
     }, [error]);
 
     return (
-        <div className={`${styles.inputContainer} ${error && showErrorStyle ? styles.errorInput : ''}`}>
+        <div className={`${styles.inputContainer} ${error && showErrorStyle ? styles.errorInput : ''} select-scope`}>
             <label htmlFor={name} className={styles.lectores}>
                 {label}
             </label>
@@ -52,7 +40,7 @@ export const CustomSelect = ({ label, name, options, value, onChange, error, pla
                 isSearchable={false}
                 inputId={name}
                 required
-                styles={customStyles}
+                styles={StylesSelect}
             />
         </div>
     );
@@ -66,7 +54,7 @@ CustomSelect.propTypes = {
         PropTypes.shape({
             value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
             label: PropTypes.string.isRequired,
-        })
+        }),
     ).isRequired,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     onChange: PropTypes.func.isRequired,

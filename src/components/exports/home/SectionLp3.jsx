@@ -59,16 +59,8 @@ export const SectionLp3 = () => {
 
     return (
         <section className={styles.sectionContainer}>
-            <video
-                ref={videoRef}
-                className={styles.videoBackground}
-                autoPlay
-                loop
-                muted
-                playsInline
-                poster="/foodie-guru-1-1.0/videos/video-home.jpg"
-            >
-                <source src="/foodie-guru-1-1.0/videos/video-home.mp4" type="video/mp4" />
+            <video ref={videoRef} className={styles.videoBackground} autoPlay loop muted playsInline poster="/videos/video-home.jpg">
+                <source src="/videos/video-home.mp4" type="video/mp4" />
             </video>
 
             {/* Controles */}

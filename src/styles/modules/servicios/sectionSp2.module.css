@@ -28,6 +28,8 @@
 }
 
 .card img {
+    user-select: none;
+    pointer-events: none;
     opacity: 0.4;
     width: 100%;
     height: auto;

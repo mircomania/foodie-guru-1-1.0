@@ -34,6 +34,8 @@
 }
 
 .logo img {
+    user-select: none;
+    pointer-events: none;
     display: block;
     width: 100px;
 }

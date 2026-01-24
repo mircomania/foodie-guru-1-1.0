@@ -20,6 +20,8 @@
 }
 
 .contenido1 img {
+    user-select: none;
+    pointer-events: none;
     position: absolute;
     right: 0;
     bottom: -20px;

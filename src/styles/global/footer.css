@@ -23,6 +23,8 @@
 }
 
 .logo-contacto img {
+    user-select: none;
+    pointer-events: none;
     cursor: pointer;
     height: 60px;
     margin-bottom: 10px;

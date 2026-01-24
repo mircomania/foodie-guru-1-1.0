@@ -63,6 +63,8 @@
 }
 
 .sectionContenido img {
+    user-select: none;
+    pointer-events: none;
     position: absolute;
     right: 0;
     width: 850px;

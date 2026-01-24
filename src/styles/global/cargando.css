@@ -28,8 +28,10 @@
 }
 
 .cargando-container img {
-    height: 80px;
+    user-select: none;
+    pointer-events: none;
     animation: saltar 1s ease-in-out infinite;
+    height: 80px;
 }
 
 .typing {

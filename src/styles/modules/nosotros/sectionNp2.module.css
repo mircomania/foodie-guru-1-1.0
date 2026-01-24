@@ -59,6 +59,8 @@
 }
 
 .imageContainer img {
+    user-select: none;
+    pointer-events: none;
     opacity: 0.3;
     width: 353px;
 }
