@@ -1,16 +1,8 @@
-import PropTypes from 'prop-types';
-
-export const MuteIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        {/* Speaker */}
-        <polygon points="5 9 9 9 13 5 13 19 9 15 5 15" />
-
-        {/* X */}
-        <line x1="16" y1="9" x2="21" y2="15" />
-        <line x1="21" y1="9" x2="16" y2="15" />
-    </svg>
-);
-
-MuteIcon.propTypes = {
-    size: PropTypes.number,
+export const MuteIcon = ({ className = '', title = 'mute', ...props }) => {
+    return (
+        <svg viewBox="0 0 32 32" fill="currentColor" role="img" className={className}>
+            <path d="M31.743,20.8c.401.47.313,1.173-.137,1.556s-1.157.358-1.555-.107l-3.802-4.446-3.811,4.455c-.394.461-1.101.478-1.546.099s-.541-1.081-.147-1.544l4.032-4.732-4.034-4.735c-.397-.466-.293-1.174.157-1.548.467-.389,1.162-.338,1.563.131l3.785,4.43,3.812-4.456c.394-.461,1.1-.477,1.545-.098s.541,1.08.148,1.542l-4.033,4.735,4.023,4.719Z" />
+            <path d="M0,18.561v-5.124c.296-.977,1.047-1.691,2.128-1.693l4.277-.008,7.911-7.907c.594-.594,1.523-.624,2.161-.123.349.273.553.658.553,1.125v22.274c-.001.651-.431,1.17-.941,1.394-.565.248-1.253.194-1.711-.265l-7.97-7.971-4.28-.007c-1.081-.002-1.823-.723-2.127-1.695Z" />
+        </svg>
+    );
 };

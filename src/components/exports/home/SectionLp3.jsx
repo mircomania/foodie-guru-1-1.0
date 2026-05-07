@@ -59,7 +59,18 @@ export const SectionLp3 = () => {
 
     return (
         <section className={styles.sectionContainer}>
-            <video ref={videoRef} className={styles.videoBackground} autoPlay loop muted playsInline poster="/videos/video-home.jpg">
+            <video
+                ref={videoRef}
+                className={styles.videoBackground}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onClick={togglePlay}
+                poster="/videos/video-home.jpg"
+            >
+                <source src="/videos/video-home.webm" type="video/webm" />
                 <source src="/videos/video-home.mp4" type="video/mp4" />
             </video>
 

@@ -1,20 +1,8 @@
-import PropTypes from 'prop-types';
-
-export const PauseIcon = () => (
-    <svg
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-    >
-        <rect x="6" y="4" width="4" height="16" />
-        <rect x="14" y="4" width="4" height="16" />
-    </svg>
-);
-
-PauseIcon.propTypes = {
-    size: PropTypes.number,
+export const PauseIcon = ({ className = '', title = 'pause', ...props }) => {
+    return (
+        <svg viewBox="0 0 32 32" fill="currentColor" role="img" className={className}>
+            <path d="M26.452,27.892l-5.142.014c-.857.002-1.847-.491-1.847-1.373l-.013-20.897c0-.89.768-1.54,1.786-1.538l5.063.013c.871.002,1.563.514,1.701,1.27v21.254c-.148.69-.727,1.178-1.548,1.257Z" />
+            <path d="M11.039,27.898l-5.394-.009c-.999-.002-1.645-.735-1.645-1.572l.01-20.942c.153-.76.847-1.268,1.731-1.268h5.259c.895.091,1.569.69,1.569,1.513l-.004,20.78c0,.795-.645,1.363-1.527,1.499Z" />
+        </svg>
+    );
 };

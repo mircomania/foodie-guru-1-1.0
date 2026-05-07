@@ -1,16 +1,10 @@
-import PropTypes from 'prop-types';
-
-export const UnmuteIcon = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-        {/* Speaker */}
-        <polygon points="5 9 9 9 13 5 13 19 9 15 5 15" />
-
-        {/* Sound wave */}
-        <path d="M16 12c0-1.5-.8-2.8-2-3.5" />
-        <path d="M16 12c0 1.5-.8 2.8-2 3.5" />
-    </svg>
-);
-
-UnmuteIcon.propTypes = {
-    size: PropTypes.number,
+export const UnmuteIcon = ({ className = '', title = 'unmute', ...props }) => {
+    return (
+        <svg viewBox="0 0 32 32" fill="currentColor" role="img" className={className}>
+            <path d="M0,18.561v-5.124c.296-.977,1.047-1.691,2.128-1.693l4.277-.008,7.911-7.907c.594-.594,1.523-.624,2.161-.123.349.273.553.658.553,1.125v22.274c-.001.651-.431,1.17-.941,1.394-.565.248-1.253.194-1.711-.265l-7.97-7.971-4.28-.007C1.046,20.254.305,19.533,0,18.561Z" />
+            <path d="M27.022,28.075l-1.427-1.42c5.803-5.918,5.879-15.294,0-21.214l1.425-1.426c2.935,2.886,4.635,6.723,4.944,10.821.047.794.047,1.53,0,2.325-.288,4.117-1.982,7.953-4.944,10.913Z" />
+            <path d="M22.55,23.652c1.827-1.806,2.884-4.126,3.104-6.648.267-3.189-.843-6.281-3.106-8.56l1.474-1.423c4.909,5.09,5.041,12.975-.001,18.056l-1.471-1.425Z" />
+            <path d="M19.544,20.708c2.525-2.554,2.581-6.652,0-9.248l1.427-1.426c3.366,3.366,3.314,8.778-.007,12.09l-1.419-1.417Z" />
+        </svg>
+    );
 };

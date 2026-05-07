@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { navLinks } from '../utils/NavBarMenu';
 import { useMediaQuery } from '../../hooks/UseMediaQuery';
 import { BurgerMenu } from './BurgerMenu';
+import { InstagramIcon } from '../../assets/icons/InstagramIcon';
 
 export const Navbar = () => {
     const isMobile = useMediaQuery('(max-width: 767px)');
@@ -37,6 +38,16 @@ export const Navbar = () => {
                                 </NavLink>
                             </li>
                         ))}
+
+                        <a
+                            href="https://www.instagram.com/foodiegurumx_?utm_source=web"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="instagram"
+                            data-link="footer-instagram-link"
+                        >
+                            <InstagramIcon className="logo-ig" />
+                        </a>
                     </ul>
                 )}
             </nav>

@@ -5,6 +5,8 @@ import { BurgerIcon } from '../../assets/icons/BurgerIcon';
 
 import logo from '../../assets/images/common/logo.webp';
 
+import { InstagramIcon } from '../../assets/icons/InstagramIcon';
+
 import { navLinks } from '../utils/NavBarMenu';
 
 export const BurgerMenu = () => {
@@ -72,9 +74,18 @@ export const BurgerMenu = () => {
                     ))}
                 </ul>
 
+                <a
+                    href="https://www.instagram.com/foodiegurumx_?utm_source=web"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="instagram"
+                    data-link="footer-instagram-link"
+                >
+                    <InstagramIcon className="logo-ig" />
+                </a>
+
                 <div className="container-bajo-mobile">
                     {/* LOGO  */}
-
                     <div className="logo-mobile-menu">
                         <img src={logo} alt="Logotipo de Foodie Guru" loading="lazy" decoding="async" />
                     </div>

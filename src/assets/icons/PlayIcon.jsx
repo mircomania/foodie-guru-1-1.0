@@ -1,19 +1,7 @@
-import PropTypes from 'prop-types';
-
-export const PlayIcon = () => (
-    <svg
-        viewBox="0 0 24 24"
-        fill="currentColor"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-    >
-        <polygon points="5,3 19,12 5,21" />
-    </svg>
-);
-
-PlayIcon.propTypes = {
-    size: PropTypes.number,
+export const PlayIcon = ({ className = '', title = 'play', ...props }) => {
+    return (
+        <svg viewBox="0 0 32 32" fill="currentColor" role="img" className={className}>
+            <path d="M26.999,17.688L6.774,27.719c-.6.297-1.276.218-1.832-.107-.448-.261-.94-.818-.94-1.493V5.894c-.001-.658.462-1.201.879-1.462.555-.348,1.239-.462,1.844-.162l20.254,10.035c.652.323,1,.987,1.021,1.631.022.665-.292,1.401-1,1.753Z" />
+        </svg>
+    );
 };
