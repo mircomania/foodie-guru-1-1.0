@@ -129,18 +129,13 @@
 }
 
 .burger-menu-nav li:last-child,
-.menu-nav li:last-child {
+.menu-nav li:nth-last-child(2) {
     color: var(--black-color);
     margin-right: 14px;
 }
 
-.burger-menu-nav li:last-child a,
-.menu-nav li:nth-last-child(2) a {
-    color: var(--black-color);
-}
-
 .burger-menu-nav li:last-child a.active,
-.menu-nav li:last-child a.active {
+.menu-nav li:nth-last-child(2) a.active {
     color: var(--black-color);
     border-bottom: none;
     padding-bottom: 0px;
